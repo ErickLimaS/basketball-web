@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import  Axios from "axios";
+import Axios from "axios";
 import React from "react";
 
 export default {
@@ -41,7 +41,7 @@ export default {
 
         const date = new Date();
         const dd = date.getDate()
-        const mm = date.getMonth() + 1
+        const mm = date.getMonth() + 1 //initial month from 0 to 1
         const yyyy = date.getFullYear()
 
         const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/games?dates[]=${yyyy}-${mm}-${dd}`)
@@ -52,7 +52,7 @@ export default {
         //to fix
         const date = new Date();
         const dd = date.getDate() - 1
-        const mm = date.getMonth() + 1
+        const mm = date.getMonth() + 1 //initial month from 0 to 1
         const yyyy = date.getFullYear()
 
         const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/games?dates[]=${yyyy}-${mm}-${dd}`)
@@ -61,7 +61,7 @@ export default {
     },
     SpecificFinishedBasketGameById: async (gameId) => {
 
-        const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/games/${gameId}&period=4`)
+        const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/stats?game_ids[]=${gameId}&per_page=100`)
 
         return data;
     },

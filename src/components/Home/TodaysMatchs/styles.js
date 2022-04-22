@@ -5,7 +5,7 @@ export const Container = styled.div`
     display: flex;
     width: 450px;
     height: 160px;
-    margin: 4rem 1rem;
+    margin: 2.6rem 1rem;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
@@ -74,7 +74,19 @@ export const Container = styled.div`
         width: 100%;
     }
 
+    .team-home-visitant{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-from-other-links-tweaks{
+        align-self: center;
+        width: initial;
+    }
+
     h2 {
+        font-size: 2rem;
+        font-weight: 600;
         margin: 1rem;
     }
 
@@ -82,4 +94,9 @@ export const Container = styled.div`
         font-size: 3rem;
         font-weight: 500;
     }
+
+    div.deactiveted{
+        display: none;
+    
+}
 `

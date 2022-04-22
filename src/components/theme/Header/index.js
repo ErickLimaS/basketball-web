@@ -7,10 +7,12 @@ export default function Header() {
     return (
         <C.Container>
             <div className='logo-name'>
-                <img src={logo} alt='NBA Report Logo' />
-                <h1>NBA Report</h1>
+                <a className='a-tag-not-affect' href='/'>
+                    <img src={logo} alt='NBA Report Logo' />
+                    <h1>NBA Report</h1>
+                </a>
             </div>
-            <div>
+            <div className='nav-links'>
                 <nav>
                     <Link to='#'>About my Team</Link>
                     <Link to='#'>Statistics</Link>

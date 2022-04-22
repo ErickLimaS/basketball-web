@@ -1,73 +1,72 @@
 import React from 'react'
 import * as C from './styles'
-import MIL from '../../img/logos/MIL.png'
 
-export default function HomePageGames({ item }) {
+export default function YesterdayHighlights({ item }) {
   return (
     <C.Container>
       <section>
         <div className='flex team'>
-          <div>
+          <div className='team-home-visitant'> 
             <small>{item.home_team.abbreviation}</small>
-            {item.home_team.abbreviation === 'ATL' &&
+            {item.home_team.id === 1 &&
               <img src='https://logotyp.us/files/atlanta-hawks.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'BKN' &&
+            {item.home_team.id === 2 &&
               <img src='https://logotyp.us/files/brooklyn-nets.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'OKC' &&
+            {item.home_team.id === 3 &&
               <img src='https://logotyp.us/files/oklahoma-city-thunder.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'BOS' &&
+            {item.home_team.id === 4 &&
               <img src='https://logotyp.us/files/boston-celtics.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'CHA' &&
-              <img src='https://www.pngfind.com/pngs/m/151-1517994_wikipedia-charlotte-bobcats-logo-png-transparent-png.png' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'CHI' &&
+            {item.home_team.id === 5 &&
+              <img src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.home_team.full_name}></img>}
+            {item.home_team.id === 6 &&
               <img src='https://logotyp.us/files/chicago-bulls.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'CLE' &&
+            {item.home_team.id === 7 &&
               <img src='https://logotyp.us/files/cleveland-cavaliers.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'DAL' &&
+            {item.home_team.id === 8 &&
               <img src='https://logotyp.us/files/dallas-mavericks.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'DEN' &&
+            {item.home_team.id === 9 &&
               <img src='https://logotyp.us/files/denver-nuggets.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'GSW' &&
-              <img src='https://logowik.com/content/uploads/images/605_golden_state.jpg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'HOU' &&
+            {item.home_team.id === 10 &&
+              <img className='img-from-other-links-tweaks' src='https://upload.wikimedia.org/wikipedia/sco/0/01/Golden_State_Warriors_logo.svg' alt={item.home_team.full_name}></img>}
+            {item.home_team.id === 11 &&
               <img src='https://logotyp.us/files/houston-rockets.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'IND' &&
+            {item.home_team.id === 12 &&
               <img src='https://logotyp.us/files/indiana-pacers.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'LAC' &&
+            {item.home_team.id === 13 &&
               <img src='https://logowik.com/content/uploads/images/la-clippers7166.jpg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'LAL' &&
+            {item.home_team.id === 14 &&
               <img src='https://logotyp.us/files/los-angeles-lakers.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'MEM' &&
+            {item.home_team.id === 15 &&
               <img src='https://logotyp.us/files/memphis-grizzlies.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'MIA' &&
+            {item.home_team.id === 16 &&
               <img src='https://logotyp.us/files/miami-heat.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'MIL' &&
+            {item.home_team.id === 17 &&
               <img src='https://logotyp.us/files/milwaukee-bucks.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'MIN' &&
+            {item.home_team.id === 18 &&
               <img src='https://logotyp.us/files/timberwolves.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'NOP' &&
+            {item.home_team.id === 19 &&
               <img src='https://logotyp.us/files/pelicans.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'NYK' &&
+            {item.home_team.id === 20 &&
               <img src='https://logotyp.us/files/new-york-knicks.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'OKC' &&
+            {item.home_team.id === 21 &&
               <img src='https://logotyp.us/files/oklahoma-city-thunder.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'ORL' &&
+            {item.home_team.id === 22 &&
               <img src='https://logotyp.us/files/orlando-magic.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'PHI' &&
+            {item.home_team.id === 23 &&
               <img src='https://logotyp.us/files/76ers.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'PHX' &&
+            {item.home_team.id === 24 &&
               <img src='https://logotyp.us/files/phoenix-suns.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'POR' &&
+            {item.home_team.id === 25 &&
               <img src='https://logotyp.us/files/portland-trail-blazers.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'SAC' &&
+            {item.home_team.id === 26 &&
               <img src='https://logotyp.us/files/sacramento-kings.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'SAS' &&
+            {item.home_team.id === 27 &&
               <img src='https://logotyp.us/files/spurs.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'TOR' &&
+            {item.home_team.id === 28 &&
               <img src='https://logotyp.us/files/toronto-raptors.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'UTA' &&
+            {item.home_team.id === 29 &&
               <img src='https://logotyp.us/files/utah-jazz.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.abbreviation === 'WAS' &&
+            {item.home_team.id === 30 &&
               <img src='https://logotyp.us/files/washington-wizards.svg' alt={item.home_team.full_name}></img>}
             <h2>{item.home_team.full_name}</h2>
           </div>
@@ -75,13 +74,13 @@ export default function HomePageGames({ item }) {
 
         <div className='status'>
           <div className='score-results'>
-            <div className='score'>
+            <div className={item.time === ''? 'score deactiveted' : 'score'}>
               <h3>{item.home_team_score}</h3>
             </div>
             <p>
               X
             </p>
-            <div className='score'>
+            <div className={item.time === ''? 'score deactiveted' : 'score'}>
               <h3>{item.visitor_team_score}</h3>
             </div>
           </div>
@@ -92,67 +91,67 @@ export default function HomePageGames({ item }) {
         </div>
 
         <div className='flex inverse team'>
-          <div>
+          <div className='team-home-visitant'>
             <small>{item.visitor_team.abbreviation}</small>
-            {item.visitor_team.abbreviation === 'ATL' &&
+            {item.visitor_team.id === 1 &&
               <img src='https://logotyp.us/files/atlanta-hawks.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'BKN' &&
+            {item.visitor_team.id === 2 &&
               <img src='https://logotyp.us/files/brooklyn-nets.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'OKC' &&
+            {item.visitor_team.id === 3 &&
               <img src='https://logotyp.us/files/oklahoma-city-thunder.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'BOS' &&
+            {item.visitor_team.id === 4 &&
               <img src='https://logotyp.us/files/boston-celtics.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'CHA' &&
-              <img src='https://www.pngfind.com/pngs/m/151-1517994_wikipedia-charlotte-bobcats-logo-png-transparent-png.png' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'CHI' &&
+            {item.visitor_team.id === 5 &&
+              <img src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.visitor_team.full_name}></img>}
+            {item.visitor_team.id === 6 &&
               <img src='https://logotyp.us/files/chicago-bulls.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'CLE' &&
+            {item.visitor_team.id === 7 &&
               <img src='https://logotyp.us/files/cleveland-cavaliers.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'DAL' &&
+            {item.visitor_team.id === 8 &&
               <img src='https://logotyp.us/files/dallas-mavericks.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'DEN' &&
+            {item.visitor_team.id === 9 &&
               <img src='https://logotyp.us/files/denver-nuggets.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'GSW' &&
-              <img src='https://logowik.com/content/uploads/images/605_golden_state.jpg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'HOU' &&
+            {item.visitor_team.id === 10 &&
+              <img className='img-from-other-links-tweaks' src='https://upload.wikimedia.org/wikipedia/sco/0/01/Golden_State_Warriors_logo.svg' alt={item.visitor_team.full_name}></img>}
+            {item.visitor_team.id === 11 &&
               <img src='https://logotyp.us/files/houston-rockets.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'IND' &&
+            {item.visitor_team.id === 12 &&
               <img src='https://logotyp.us/files/indiana-pacers.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'LAC' &&
+            {item.visitor_team.id === 13 &&
               <img src='https://logowik.com/content/uploads/images/la-clippers7166.jpg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'LAL' &&
+            {item.visitor_team.id === 14 &&
               <img src='https://logotyp.us/files/los-angeles-lakers.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'MEM' &&
+            {item.visitor_team.id === 15 &&
               <img src='https://logotyp.us/files/memphis-grizzlies.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'MIA' &&
+            {item.visitor_team.id === 16 &&
               <img src='https://logotyp.us/files/miami-heat.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'MIL' &&
+            {item.visitor_team.id === 17 &&
               <img src='https://logotyp.us/files/milwaukee-bucks.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'MIN' &&
+            {item.visitor_team.id === 18 &&
               <img src='https://logotyp.us/files/timberwolves.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'NOP' &&
+            {item.visitor_team.id === 19 &&
               <img src='https://logotyp.us/files/pelicans.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'NYK' &&
+            {item.visitor_team.id === 20 &&
               <img src='https://logotyp.us/files/new-york-knicks.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'OKC' &&
+            {item.visitor_team.id === 21 &&
               <img src='https://logotyp.us/files/oklahoma-city-thunder.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'ORL' &&
+            {item.visitor_team.id === 22 &&
               <img src='https://logotyp.us/files/orlando-magic.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'PHI' &&
+            {item.visitor_team.id === 23 &&
               <img src='https://logotyp.us/files/76ers.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'PHX' &&
+            {item.visitor_team.id === 24 &&
               <img src='https://logotyp.us/files/phoenix-suns.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'POR' &&
+            {item.visitor_team.id === 25 &&
               <img src='https://logotyp.us/files/portland-trail-blazers.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'SAC' &&
+            {item.visitor_team.id === 26 &&
               <img src='https://logotyp.us/files/sacramento-kings.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'SAS' &&
+            {item.visitor_team.id === 27 &&
               <img src='https://logotyp.us/files/spurs.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'TOR' &&
+            {item.visitor_team.id === 28 &&
               <img src='https://logotyp.us/files/toronto-raptors.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'UTA' &&
+            {item.visitor_team.id === 29 &&
               <img src='https://logotyp.us/files/utah-jazz.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.abbreviation === 'WAS' &&
+            {item.visitor_team.id === 30 &&
               <img src='https://logotyp.us/files/washington-wizards.svg' alt={item.visitor_team.full_name}></img>}
             <h2>{item.visitor_team.full_name}</h2>
           </div>

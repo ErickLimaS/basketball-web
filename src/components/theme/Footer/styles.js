@@ -14,11 +14,24 @@ export const Container = styled.footer`
     ul {
         list-style-type: none;
     }
+
+    li{
+        margin: 1.5rem 0;
+    }
     
     a {
         color: #FFF;
+        padding: 0.5rem;
+
+        :hover{
+            color: #e3e3e3;
+        }
     }
 
+    hr{
+        width: 95%;
+        color: #000!important;
+    }
     
     .disclaimer{
         display: flex;

@@ -10,6 +10,20 @@ export const Container = styled.header`
 
     a {
         color: #FFF;
+        text-decoration: none;
+        
+        :hover{
+            color: #e3e3e3;
+        }
+    }
+
+    a.a-tag-not-affect{
+        align-items: center;
+        display: flex;
+        
+        :hover{
+            color: #FFF;
+        }
     }
 
     h1 {
@@ -32,6 +46,11 @@ export const Container = styled.header`
     .logo-name{
         display:flex;
         align-items: center;
+    }
+
+    .nav-links{
+        right: -13rem;
+        position: relative;
     }
 
     img{

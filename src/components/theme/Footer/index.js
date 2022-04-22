@@ -6,12 +6,11 @@ export default function Footer() {
         <C.Container>
             <div className='about'>
                 <ul>
-                    <li><a href='#'>Sobre</a></li>
-                    <li><a href='#'>GitHub</a></li>
-                    <li><a href='#'>API Usada</a></li>
+                    <li><a href='/sobre'>Sobre</a></li>
+                    <li><a href='https://github.com/ErickLimaS'>GitHub</a></li>
+                    <li><a href='https://www.balldontlie.io/'>API Usada</a></li>
                 </ul>
             </div>
-            <hr />
             <div className='disclaimer'>
                 Informações usadas apenas para estudos. Todos os direitos reservados para seus respectivos donos.
             </div>
