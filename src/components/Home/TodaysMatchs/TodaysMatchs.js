@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import * as C from './styles'
 
 export default function YesterdayHighlights({ item }) {
@@ -6,7 +7,7 @@ export default function YesterdayHighlights({ item }) {
     <C.Container>
       <section>
         <div className='flex team'>
-          <div className='team-home-visitant'> 
+          <div className='team-home-visitant'>
             <small>{item.home_team.abbreviation}</small>
             {item.home_team.id === 1 &&
               <img src='https://logotyp.us/files/atlanta-hawks.svg' alt={item.home_team.full_name}></img>}
@@ -68,19 +69,19 @@ export default function YesterdayHighlights({ item }) {
               <img src='https://logotyp.us/files/utah-jazz.svg' alt={item.home_team.full_name}></img>}
             {item.home_team.id === 30 &&
               <img src='https://logotyp.us/files/washington-wizards.svg' alt={item.home_team.full_name}></img>}
-            <h2>{item.home_team.full_name}</h2>
+            <Link to={`team?${item.home_team.id}`}><h2>{item.home_team.full_name}</h2></Link>
           </div>
         </div>
 
         <div className='status'>
           <div className='score-results'>
-            <div className={item.time === ''? 'score deactiveted' : 'score'}>
+            <div className={item.time === '' ? 'score deactiveted' : 'score'}>
               <h3>{item.home_team_score}</h3>
             </div>
             <p>
               X
             </p>
-            <div className={item.time === ''? 'score deactiveted' : 'score'}>
+            <div className={item.time === '' ? 'score deactiveted' : 'score'}>
               <h3>{item.visitor_team_score}</h3>
             </div>
           </div>
@@ -153,7 +154,7 @@ export default function YesterdayHighlights({ item }) {
               <img src='https://logotyp.us/files/utah-jazz.svg' alt={item.visitor_team.full_name}></img>}
             {item.visitor_team.id === 30 &&
               <img src='https://logotyp.us/files/washington-wizards.svg' alt={item.visitor_team.full_name}></img>}
-            <h2>{item.visitor_team.full_name}</h2>
+            <Link to={`team?${item.visitor_team.id}`}><h2>{item.visitor_team.full_name}</h2></Link>
           </div>
         </div>
       </section>

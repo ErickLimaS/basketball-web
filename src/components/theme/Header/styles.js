@@ -56,4 +56,8 @@ export const Container = styled.header`
     img{
         height: 4.5rem;
     }
+
+    .sticky{
+       
+    }
 `

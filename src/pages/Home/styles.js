@@ -18,6 +18,12 @@ export const Container = styled.div`
         justify-content: space-between;
     }
 
+    .flex-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .header-title{
         width: 70rem;
 
@@ -28,7 +34,6 @@ export const Container = styled.div`
     }
 
     .today-matchs h2:first-child{
-        color: #FFF;
         margin: 0.5rem 0 0 2rem;
         font-size: 2.4rem;
         font-weight: 500;
@@ -44,11 +49,63 @@ export const Container = styled.div`
             :hover{
                 color: #c0c0c0;
             }
+        }
     }
     
     .previous-games {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        width: 100%;
+
+    
+    }
+
+    .game-statistics{
+        display:none;
+        transition: all ease-in 550ms;
+    }
+    
+    .previous-games .game-statistics:first-child{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .yesterday-highlight-games{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h2{
+            font-size: 3rem;
+        }
+    }
+
+    div.buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+         button{
+            width: 4rem;
+            height: 4rem;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 1rem;
+            border-radius: 80px;
+            background-color: #FFF;
+            border: 1px solid #000;
+            cursor: pointer;
+
+            :hover{
+                border: 2px solid #000;
+            }
+         }
     }
     
 `

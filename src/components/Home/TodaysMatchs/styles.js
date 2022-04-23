@@ -10,9 +10,13 @@ export const Container = styled.div`
     align-items: center;
     font-size: 1.5rem;
 
+    a{
+        color: #000!important;
+    }
+
     section {
         color: #000;
-        background-color: #c0c0c0;
+        background-color: #ffffffd1;
         border-radius: 10px;
         display: flex;
         width: 100%;
@@ -97,6 +101,5 @@ export const Container = styled.div`
 
     div.deactiveted{
         display: none;
-    
-}
+    }
 `

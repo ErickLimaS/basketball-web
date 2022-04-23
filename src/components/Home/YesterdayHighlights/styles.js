@@ -3,8 +3,6 @@ import styled from 'styled-components'
 export const Container = styled.div`
     color: #000;
     display: flex;
-    width: 450px;
-    height: 160px;
     margin: 2.6rem 1rem;
     justify-content: center;
     align-items: center;
@@ -12,10 +10,11 @@ export const Container = styled.div`
     height: 100%;
     width: 100%;
 
-    section {
+    div.section-map {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     .score-and-teams {
@@ -33,14 +32,14 @@ export const Container = styled.div`
         display: flex;
         align-items:center;
     }
+    .flex-2{
+        display: flex;
+        align-items:center;
+        flex-direction: column;
+    }
 
     .team {
         margin: 0.5rem 1rem;
-        width: 40%;
-    }
-
-    .status {
-        width: 20%;
     }
 
     .status * {
@@ -79,9 +78,10 @@ export const Container = styled.div`
     }
 
     img {
-        height: 80px;
-        width: 100%;
+        height: 100%;
+        width: 90%;
     }
+    
 
     .team-home-visitant{
         display: flex;
@@ -90,7 +90,7 @@ export const Container = styled.div`
 
     .img-from-other-links-tweaks{
         align-self: center;
-        width: initial;
+        width: 150px;
     }
 
     h2 {
@@ -100,7 +100,7 @@ export const Container = styled.div`
     }
 
     .score h3{
-        font-size: 3rem;
+        font-size: 5rem;
         font-weight: 500;
     }
 
@@ -108,7 +108,13 @@ export const Container = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin: 0 2rem;
+
+        div.name-and-position{
+            margin: 0 20px;
+        }
     }
 
+    
 }
 `

@@ -7,24 +7,50 @@ export const Container = styled.div`
     padding: 1rem;
     font-size: 1.4rem;
     font-weight: 400;
+    width: 100%;
 
-    .name-and-position {
-        background-color: #c0c0c0;
+    .player-stats{
         display: flex;
-        flex-direction: row;
-        flex: 1;
         justify-content: center;
         align-items: center;
     }
-    
-    .name-and-position div{
 
-        margin: 0.5rem;
+    .name-and-position {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #FFF;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        h3{
+            font-weight: 600;
+        }
+
     }
 
-    .name-and-position div *{
+    .numbers {
         display: flex;
-        font-weight: 600;
+        flex-direction: row;
+        border: 1px solid #000;
+        
+        
+        div {
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bold{
+            font-weight: 600;
+        }
+    }
+    
+    .inverse{
+        flex-direction: row-reverse;
     }
 
 `
