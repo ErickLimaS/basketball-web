@@ -69,7 +69,7 @@ export default function YesterdayHighlights({ item }) {
               <img src='https://logotyp.us/files/utah-jazz.svg' alt={item.home_team.full_name}></img>}
             {item.home_team.id === 30 &&
               <img src='https://logotyp.us/files/washington-wizards.svg' alt={item.home_team.full_name}></img>}
-            <Link to={`team?${item.home_team.id}`}><h2>{item.home_team.full_name}</h2></Link>
+            <Link to={`team/${item.home_team.id}`}><h2>{item.home_team.full_name}</h2></Link>
           </div>
         </div>
 
@@ -154,7 +154,7 @@ export default function YesterdayHighlights({ item }) {
               <img src='https://logotyp.us/files/utah-jazz.svg' alt={item.visitor_team.full_name}></img>}
             {item.visitor_team.id === 30 &&
               <img src='https://logotyp.us/files/washington-wizards.svg' alt={item.visitor_team.full_name}></img>}
-            <Link to={`team?${item.visitor_team.id}`}><h2>{item.visitor_team.full_name}</h2></Link>
+            <Link to={`team/${item.visitor_team.id}`}><h2>{item.visitor_team.full_name}</h2></Link>
           </div>
         </div>
       </section>

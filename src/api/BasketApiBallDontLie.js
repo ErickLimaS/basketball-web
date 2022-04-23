@@ -11,17 +11,17 @@ export default {
 
         return data;
     },
-    SpecificBasketTeam: async (teamId) => {
+    SpecificBasketTeam: async (id) => {
 
-        const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/teams/${teamId}`)
-
+        const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/teams/${id}`)
+        console.log(data)
         return data;
     },
     // players
     EveryBasketPlayer: async () => {
 
         const { data } = await Axios.get('https://www.balldontlie.io/api/v1/players')
-
+        console.log(data)
         return data;
     },
     SpecificBasketPlayer: async (playerId) => {
@@ -90,7 +90,109 @@ export default {
             return data;
         }
     },
-    // stats
+    // season
+    GetSeason: async (team, season) => {
+        try {
+            const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${team}&seasons[]=${season}&per_page=100`)
+            console.log(data)
+            return data;
+        }
+        catch(error){
+            return console.log(`erro ${error}`)
+        }
+    },
+    GetPresentSeason: async (team) => {// fix year season
+        try {
+            const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${team}&seasons[]=2021&per_page=100`)
+            console.log(data)
+            return data;
+        }
+        catch(error){
+            return console.log(`erro ${error}`)
+        }
+    },
+    // SEASON BEGINS IN OCTOBER, ENDS IN APRIL
+    GetSelectSeasonOctober: async (season, id) => {
+        try{
+            
+            const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${season}-10-01&end_date=${season}-10-30&per_page=100`)
+
+            return data;
+        }
+        catch(error){
+            return console.log(`ERROR: ${error}`)
+        }
+    },
+    GetSelectSeasonNovember: async (season, id) => {
+        try{
+            
+            const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${season}-11-11&end_date=${season}-11-30&per_page=100`)
+
+            return data;
+        }
+        catch(error){
+            return console.log(`ERROR: ${error}`)
+        }
+    },
+    GetSelectSeasonDecember: async (season, id) => {
+        try{
+            
+            const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${season}-12-11&end_date=${season}-12-30&per_page=100`)
+
+            return data;
+        }
+        catch(error){
+            return console.log(`ERROR: ${error}`)
+        }
+    },
+    GetSelectSeasonJanuary: async (season, id) => {// january needs to be set on next year
+        try{
+            const seasonConverted = season + 1
+
+            const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${seasonConverted}-01-01&end_date=${seasonConverted}-01-30&per_page=100`)
+
+            return data;
+        }
+        catch(error){
+            return console.log(`ERROR: ${error}`)
+        }
+    },
+    GetSelectSeasonFebruary: async (season, id) => {
+        try{
+            const seasonConverted = season + 1
+
+            const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${seasonConverted}-02-01&end_date=${seasonConverted}-02-28&per_page=100`)
+
+            return data;
+        }
+        catch(error){
+            return console.log(`ERROR: ${error}`)
+        }
+    },
+    GetSelectSeasonMarch: async (season, id) => {
+        try{
+            const seasonConverted = season + 1
+
+            const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${seasonConverted}-03-01&end_date=${seasonConverted}-03-30&per_page=100`)
+
+            return data;
+        }
+        catch(error){
+            return console.log(`ERROR: ${error}`)
+        }
+    },
+    GetSelectSeasonApril: async (season, id) => {
+        try{
+            const seasonConverted = season + 1
+
+            const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${seasonConverted}-04-01&end_date=${seasonConverted}-04-30&per_page=100`)
+
+            return data;
+        }
+        catch(error){
+            return console.log(`ERROR: ${error}`)
+        }
+    },
 
 
 }

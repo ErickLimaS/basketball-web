@@ -1,59 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import * as C from './styles'
-import API from '../../../api/BasketApiBallDontLie'
-import StatisticsPlayer from './StatisticsPlayer/StatisticsPlayer'
 import { Link } from 'react-router-dom'
 
-export default function YesterdayHighlights({ item }) {
+export default function GameScore({ item }) {
 
   const [gameStats, setGameStats] = useState([])
 
-  const yesterdayGameStats = async (gameId) => {
-    const { data } = await API.SpecificFinishedBasketGameById(gameId)
-    setGameStats(data)
-  }
 
   const date = new Date(item.date.split("T")[0])
   const yyyy = date.getFullYear()
   const mm = date.getMonth() +1
   const dd = date.getDate()
 
-  let team1 = []
-  let team2 = []
-  let aux1 = gameStats
+  // let team1 = []
+  // let team2 = []
+  // let aux1 = gameStats
   // console.log(aux1)
-
-  const filter = (aux) => {
-    // console.log(aux.player.team_id)
-
-    if (team1.length === 0) {
-      return team1.push(aux)
-    }
-    else if (team1.length !== 0 && team1[0].player.team_id === aux.player.team_id) {
-      return team1.push(aux)
-    }
-    else if (team2.length === 0) {
-      return team2.push(aux)
-    }
-    else if (team2.length !== 0 && team2[0].player.team_id === aux.player.team_id) {
-      return team2.push(aux)
-    }
-    else {
-      return console.log('problema ' + aux1)
-    }
-
-  }
-  gameStats.filter(filter)
 
   // console.log(team1)
   // console.log(team2)
-
-
-  useEffect(() => {
-    yesterdayGameStats(item.id)
-
-
-  }, [])
 
   // console.log(gameStats)
 
@@ -145,7 +110,6 @@ export default function YesterdayHighlights({ item }) {
               </div>
               <div className='match-time active'>
                 <p>{dd}/{mm}/{yyyy}</p>
-                <p>{item.status}</p>
               </div>
             </div>
 
@@ -214,19 +178,6 @@ export default function YesterdayHighlights({ item }) {
                   <img src='https://logotyp.us/files/washington-wizards.svg' alt={item.visitor_team.full_name}></img>}
                 <Link to={`team/${item.visitor_team.id}`}><h2>{item.visitor_team.full_name}</h2></Link>
               </div>
-            </div>
-          </div>
-
-          <div className='statistics-players'>
-            <div>
-              {team2.map((team2, key) => (
-                <StatisticsPlayer team2={team2} key={team2.id} />
-              ))}
-            </div>
-            <div>
-              {team1.map((team1, key) => (
-                <StatisticsPlayer team1={team1} key={team1.id} />
-              ))}
             </div>
           </div>
         </div>

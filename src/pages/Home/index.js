@@ -6,10 +6,9 @@ import TodaysMatchs from '../../components/Home/TodaysMatchs/TodaysMatchs';
 import YesterdayHighlights from '../../components/Home/YesterdayHighlights/YesterdayHighlights';
 
 export default function Home() {
-    // const [teams, setTeams] = useState([])
     const [gamesToday, setGamesToday] = useState([])
     const [gamesYesterday, setGamesYesterday] = useState([])
-    const [btnClick, setBtnClick] = useState(0)
+    const [btnClick, setBtnClick] = useState(1)
 
     useEffect(() => {
         const today = async () => {
@@ -30,83 +29,61 @@ export default function Home() {
     const initialId = gamesYesterday[0]
 
     const showNextGameScore = (btnClick) => {
-        const idAux = gamesYesterday[btnClick]
-        console.log(idAux)
-        let previousId = idAux.id
-        previousId--
-        console.log(btnClick)
-        let elementId = document.getElementById(idAux.id).id
-        console.log(elementId)
+        const gamesLength = gamesYesterday.length - 1
+        // console.log(gamesLength)
 
-        if (initialId !== elementId) {
-            document.getElementById(idAux.id).style.display = "block";
-            setBtnClick(+1)
-            document.getElementById(previousId).style.display = "none";
-        }
-        else if (btnClick > gamesYesterday.lenght ) {
-            setBtnClick(0)
+        if (btnClick > gamesLength) {
+            // console.log('foi')
+            setBtnClick(1)
+            document.getElementById(gamesYesterday[gamesLength].id
+            ).style.display = "none";
             document.getElementById(gamesYesterday[0].id
             ).style.display = "block";
-            document.getElementById(gamesYesterday[gamesYesterday.lenght].id
-            ).style.display = "none";
+
         }
         else {
-            setBtnClick(+1)
+            const idAux = gamesYesterday[btnClick]
+            // console.log(idAux)
+            let previousId = idAux.id
+            previousId--
+            // console.log(previousId)
+
+            // console.log(btnClick)
+            let nextId = document.getElementById(idAux.id).id
+            // console.log(nextId)
+
+            if (initialId < nextId || initialId !== nextId) {
+                document.getElementById(previousId).style.display = "none";
+                document.getElementById(idAux.id).style.display = "block";
+                setBtnClick(btnClick + 1)
+            }
         }
     }
 
     const showPreviousGameScore = (i) => {
-        let idAux
-        let previousId
+        const gamesLength = gamesYesterday.length - 1
+        // console.log(gamesLength)
+        // console.log(btnClick)
+        setBtnClick(btnClick - 1)
 
-        console.log(i)
-        let elementId = document.getElementById(idAux.id).id
-        console.log(previousId)
-        console.log(elementId)
-        console.log(idAux)
+        if (btnClick < 1) {
 
-        if (initialId !== elementId) {
-            
-            document.getElementById(idAux.id).style.display = "none";
-            setBtnClick(-1)
-            document.getElementById(previousId).style.display = "block";
-            console.log(previousId)
-            console.log(elementId)
-            console.log(idAux)
-            if (previousId < initialId) {
-                previousId = initialId
-            }
-        }
-        else if (previousId < initialId) {
-            previousId = initialId
-            console.log(previousId)
-            console.log(elementId)
-            console.log(idAux)
-        }
-        else if (btnClick < 0) {
-            setBtnClick(0)
-            console.log(previousId)
-            console.log(elementId)
-            console.log(idAux)
+            setBtnClick(btnClick + 1)
+            // console.log('if')
+            setBtnClick(gamesLength)
+            document.getElementById(gamesYesterday[btnClick].id
+            ).style.display = "none";
+            document.getElementById(gamesYesterday[gamesLength].id
+            ).style.display = "block";
         }
         else {
-            if (i >= 0) {
-                idAux = gamesYesterday[i]
-            }
-            else {
-                idAux = gamesYesterday[0]
-            }
+            // console.log('else')
+            document.getElementById(gamesYesterday[btnClick].id
+            ).style.display = "none";
+            document.getElementById(gamesYesterday[btnClick - 1].id
+            ).style.display = "block";
 
-            if (idAux.id - 1 > initialId) {
-                previousId = idAux.id
-                previousId--
-            }
-            else {
-                previousId = initialId
-            }
-            console.log(previousId)
-            console.log(elementId)
-            console.log(idAux)
+
         }
     }
 
@@ -138,9 +115,8 @@ export default function Home() {
                             showNextGameScore(btnClick)
                         }}>{'>'}</button>
                     </div>
-                    <p>{btnClick +1} de {gamesYesterday.length}</p>
+                    <p>{btnClick} de {gamesYesterday.length}</p>
                     <div className='previous-games'>
-
                         {gamesYesterday.map((item, key) => (
                             <YesterdayHighlights item={item} key={key} />
                         ))}
