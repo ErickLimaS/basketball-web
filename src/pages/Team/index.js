@@ -27,13 +27,13 @@ export default function Team() {
         logo = 'https://logotyp.us/files/atlanta-hawks.svg'
     }
     else if (Number.parseInt(teamId) === 2) {
+        logo = 'https://logotyp.us/files/boston-celtics.svg'
+    }
+    else if (Number.parseInt(teamId) === 3) {
         logo = 'https://logotyp.us/files/brooklyn-nets.svg'
     }
     else if (Number.parseInt(teamId) === 3) {
         logo = 'https://logotyp.us/files/oklahoma-city-thunder.svg'
-    }
-    else if (Number.parseInt(teamId) === 4) {
-        logo = 'https://logotyp.us/files/boston-celtics.svg'
     }
     else if (Number.parseInt(teamId) === 5) {
         logo = 'https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg'

@@ -73,6 +73,7 @@ export const Container = styled.div`
             .season-year{
                 color: #FFF;
                 font-size: 2.2rem;
+                margin-bottom: 1rem;
 
                 .search-button{
                     background-color: rgba(0,0,0,0.6);

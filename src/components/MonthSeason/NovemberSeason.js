@@ -19,7 +19,7 @@ export default function NovemberSeason(item) {
     return (
         <C.Container>
             <div className='month-score'>
-                <h3>November/{season}</h3>
+                <h3 className='month-heading'>November/{season}</h3>
                 <div className='month-score'>
                     {monthSeason.map((item, key) => (
                         <GameScore item={item} key={key} />

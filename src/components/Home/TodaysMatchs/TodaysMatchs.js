@@ -12,21 +12,21 @@ export default function YesterdayHighlights({ item }) {
             {item.home_team.id === 1 &&
               <img src='https://logotyp.us/files/atlanta-hawks.svg' alt={item.home_team.full_name}></img>}
             {item.home_team.id === 2 &&
-              <img src='https://logotyp.us/files/brooklyn-nets.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.id === 3 &&
-              <img src='https://logotyp.us/files/oklahoma-city-thunder.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.id === 4 &&
               <img src='https://logotyp.us/files/boston-celtics.svg' alt={item.home_team.full_name}></img>}
+            {item.home_team.id === 3 &&
+              <img src='https://logotyp.us/files/brooklyn-nets.svg' alt={item.home_team.full_name}></img>}
+            {item.home_team.id === 4 &&
+              <img src='https://logotyp.us/files/oklahoma-city-thunder.svg' alt={item.home_team.full_name}></img>}
             {item.home_team.id === 5 &&
-              <img src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.id === 6 &&
               <img src='https://logotyp.us/files/chicago-bulls.svg' alt={item.home_team.full_name}></img>}
+            {item.home_team.id === 6 &&
+              <img src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.home_team.full_name}></img>}
             {item.home_team.id === 7 &&
-              <img src='https://logotyp.us/files/cleveland-cavaliers.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.id === 8 &&
               <img src='https://logotyp.us/files/dallas-mavericks.svg' alt={item.home_team.full_name}></img>}
-            {item.home_team.id === 9 &&
+            {item.home_team.id === 8 &&
               <img src='https://logotyp.us/files/denver-nuggets.svg' alt={item.home_team.full_name}></img>}
+            {item.home_team.id === 9 &&
+              <img src='https://logotyp.us/files/cleveland-cavaliers.svg' alt={item.home_team.full_name}></img>}
             {item.home_team.id === 10 &&
               <img className='img-from-other-links-tweaks' src='https://upload.wikimedia.org/wikipedia/sco/0/01/Golden_State_Warriors_logo.svg' alt={item.home_team.full_name}></img>}
             {item.home_team.id === 11 &&
@@ -97,21 +97,21 @@ export default function YesterdayHighlights({ item }) {
             {item.visitor_team.id === 1 &&
               <img src='https://logotyp.us/files/atlanta-hawks.svg' alt={item.visitor_team.full_name}></img>}
             {item.visitor_team.id === 2 &&
-              <img src='https://logotyp.us/files/brooklyn-nets.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.id === 3 &&
-              <img src='https://logotyp.us/files/oklahoma-city-thunder.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.id === 4 &&
               <img src='https://logotyp.us/files/boston-celtics.svg' alt={item.visitor_team.full_name}></img>}
+            {item.visitor_team.id === 3 &&
+              <img src='https://logotyp.us/files/brooklyn-nets.svg' alt={item.visitor_team.full_name}></img>}
+            {item.visitor_team.id === 4 &&
+              <img src='https://logotyp.us/files/oklahoma-city-thunder.svg' alt={item.visitor_team.full_name}></img>}
             {item.visitor_team.id === 5 &&
-              <img src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.id === 6 &&
               <img src='https://logotyp.us/files/chicago-bulls.svg' alt={item.visitor_team.full_name}></img>}
+            {item.visitor_team.id === 6 &&
+              <img src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.visitor_team.full_name}></img>}
             {item.visitor_team.id === 7 &&
-              <img src='https://logotyp.us/files/cleveland-cavaliers.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.id === 8 &&
               <img src='https://logotyp.us/files/dallas-mavericks.svg' alt={item.visitor_team.full_name}></img>}
-            {item.visitor_team.id === 9 &&
+            {item.visitor_team.id === 8 &&
               <img src='https://logotyp.us/files/denver-nuggets.svg' alt={item.visitor_team.full_name}></img>}
+            {item.visitor_team.id === 9 &&
+              <img src='https://logotyp.us/files/cleveland-cavaliers.svg' alt={item.visitor_team.full_name}></img>}
             {item.visitor_team.id === 10 &&
               <img className='img-from-other-links-tweaks' src='https://upload.wikimedia.org/wikipedia/sco/0/01/Golden_State_Warriors_logo.svg' alt={item.visitor_team.full_name}></img>}
             {item.visitor_team.id === 11 &&
