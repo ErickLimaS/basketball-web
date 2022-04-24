@@ -24,6 +24,7 @@ export default function NovemberSeason(item) {
                     {monthSeason.map((item, key) => (
                         <GameScore item={item} key={key} />
                     ))}
+                    {monthSeason.length === 0 && <h3 style={{'width': '200px','margin' : '2rem'}}>No Games</h3>}
                 </div>
             </div>
         </C.Container >

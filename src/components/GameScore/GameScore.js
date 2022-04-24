@@ -9,7 +9,7 @@ export default function GameScore({ item }) {
 
   const date = new Date(item.date.split("T")[0])
   const yyyy = date.getFullYear()
-  const mm = date.getMonth() +1
+  const mm = date.getMonth() + 1
   const dd = date.getDate()
 
   // let team1 = []
@@ -30,7 +30,6 @@ export default function GameScore({ item }) {
           <div className='score-and-teams'>
             <div className='flex-2 team'>
               <div className='team-home-visitant'>
-                <small>{item.home_team.abbreviation}</small>
 
                 {item.home_team.id === 1 &&
                   <img src='https://logotyp.us/files/atlanta-hawks.svg' alt={item.home_team.full_name}></img>}
@@ -41,9 +40,9 @@ export default function GameScore({ item }) {
                 {item.home_team.id === 4 &&
                   <img src='https://logotyp.us/files/boston-celtics.svg' alt={item.home_team.full_name}></img>}
                 {item.home_team.id === 5 &&
-                  <img src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.home_team.full_name}></img>}
-                {item.home_team.id === 6 &&
                   <img src='https://logotyp.us/files/chicago-bulls.svg' alt={item.home_team.full_name}></img>}
+                {item.home_team.id === 6 &&
+                  <img src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.home_team.full_name}></img>}
                 {item.home_team.id === 7 &&
                   <img src='https://logotyp.us/files/cleveland-cavaliers.svg' alt={item.home_team.full_name}></img>}
                 {item.home_team.id === 8 &&
@@ -51,7 +50,7 @@ export default function GameScore({ item }) {
                 {item.home_team.id === 9 &&
                   <img src='https://logotyp.us/files/denver-nuggets.svg' alt={item.home_team.full_name}></img>}
                 {item.home_team.id === 10 &&
-                  <img className='img-from-other-links-tweaks' src='https://upload.wikimedia.org/wikipedia/sco/0/01/Golden_State_Warriors_logo.svg' alt={item.home_team.full_name}></img>}
+                  <img className='img-from-other-links-tweaks img-not-svg' src='https://upload.wikimedia.org/wikipedia/sco/0/01/Golden_State_Warriors_logo.svg' alt={item.home_team.full_name}></img>}
                 {item.home_team.id === 11 &&
                   <img src='https://logotyp.us/files/houston-rockets.svg' alt={item.home_team.full_name}></img>}
                 {item.home_team.id === 12 &&
@@ -97,25 +96,27 @@ export default function GameScore({ item }) {
             </div>
 
             <div className='status'>
-              <div className='score-results'>
+              <div className='match-results'>
                 <div className='score'>
                   <h3>{item.home_team_score}</h3>
                 </div>
-                <p>
-                  X
-                </p>
+                <div className='versus'>
+                  <p>
+                    X
+                  </p>
+                  <div className='match-time active'>
+                    <p>{dd}/{mm}/{yyyy}</p>
+                  </div>
+                </div>
                 <div className='score'>
                   <h3>{item.visitor_team_score}</h3>
                 </div>
               </div>
-              <div className='match-time active'>
-                <p>{dd}/{mm}/{yyyy}</p>
-              </div>
+
             </div>
 
             <div className='flex-2 inverse team'>
               <div className='team-home-visitant'>
-                <small>{item.visitor_team.abbreviation}</small>
                 {item.visitor_team.id === 1 &&
                   <img src='https://logotyp.us/files/atlanta-hawks.svg' alt={item.visitor_team.full_name}></img>}
                 {item.visitor_team.id === 2 &&
@@ -125,9 +126,9 @@ export default function GameScore({ item }) {
                 {item.visitor_team.id === 4 &&
                   <img src='https://logotyp.us/files/boston-celtics.svg' alt={item.visitor_team.full_name}></img>}
                 {item.visitor_team.id === 5 &&
-                  <img src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.visitor_team.full_name}></img>}
-                {item.visitor_team.id === 6 &&
                   <img src='https://logotyp.us/files/chicago-bulls.svg' alt={item.visitor_team.full_name}></img>}
+                {item.visitor_team.id === 6 &&
+                  <img src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.visitor_team.full_name}></img>}
                 {item.visitor_team.id === 7 &&
                   <img src='https://logotyp.us/files/cleveland-cavaliers.svg' alt={item.visitor_team.full_name}></img>}
                 {item.visitor_team.id === 8 &&
@@ -135,7 +136,7 @@ export default function GameScore({ item }) {
                 {item.visitor_team.id === 9 &&
                   <img src='https://logotyp.us/files/denver-nuggets.svg' alt={item.visitor_team.full_name}></img>}
                 {item.visitor_team.id === 10 &&
-                  <img className='img-from-other-links-tweaks' src='https://upload.wikimedia.org/wikipedia/sco/0/01/Golden_State_Warriors_logo.svg' alt={item.visitor_team.full_name}></img>}
+                  <img className='img-from-other-links-tweaks img-not-svg' src='https://upload.wikimedia.org/wikipedia/sco/0/01/Golden_State_Warriors_logo.svg' alt={item.visitor_team.full_name}></img>}
                 {item.visitor_team.id === 11 &&
                   <img src='https://logotyp.us/files/houston-rockets.svg' alt={item.visitor_team.full_name}></img>}
                 {item.visitor_team.id === 12 &&

@@ -8,25 +8,14 @@ export const Container = styled.div`
     align-items: center;
     font-size: 1.5rem;
     height: 100%;
-    
 
-    div.section-map {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: min-content;
-    }
+    a{
+        font-size: 1.2rem;
 
-    .score-and-teams {
-        color: #000;
-        background-color: #c0c0c0;
-        border-radius: 10px;
-        display: flex;
-        width: max-content!important;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
+        h2{
+            margin: 0;
+           font-weight: 600;
+        }
     }
 
     .flex{
@@ -38,6 +27,7 @@ export const Container = styled.div`
         display: flex;
         align-items:center;
         flex-direction: column;
+        justify-content: center;
         
     }
 
@@ -45,84 +35,65 @@ export const Container = styled.div`
         margin: 0.5rem 1rem;
     }
 
-    .status * {
+    .score-and-teams{
         display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
-
-    .status .score-results div{
-        margin: 0 2rem;
-        
-    }
-
-    .match-time{
-        flex-direction: column;
-        border-radius: 4px;
-        color: red;
-
-        p{
-            margin: 0;
-        }
-    }
-
-    .active{
-        flex-direction: column;
-        background-color: #FFF;
-        border-radius: 4px;
-
-        p{
-            color: green;
-            margin: 0;
-        }
-    }
-
-    .inverse{
-        flex-direction: row-reverse;
-    }
-
-    img {
-        height: 100%;
-        width: 90%;
+        flex-direction: row;
+        background-color: rgba(250,250,250, 0.9);
+        border-radius: 8px;
+        width: 80vh;
+        height: 25vh;
     }
     
-
     .team-home-visitant{
         display: flex;
         flex-direction: column;
-    }
+        align-items: center;
+        align-content: center;
+    
+        img{
+        }
 
-    .img-from-other-links-tweaks{
-        align-self: center;
-        width: 150px;
-    }
-
-    h2 {
-        font-size: 2rem;
-        font-weight: 600;
-        margin: 1rem;
-    }
-
-    .score h3{
-        font-size: 4rem;
-        font-weight: 500;
-    }
-
-    .statistics-players{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 0 2rem;
-
-        div.name-and-position{
-            margin: 0 20px;
-            
+        .img-not-svg{
+            width: 50%;
         }
     }
 
-   
+    .status{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-    
+        .match-results{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            .versus {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                div{
+                    display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                }
+            }
+            .score{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                font-size: 3rem;
+
+                h3{
+                    margin: 0;
+                }
+            }
+        }
+    }
 
 `

@@ -92,7 +92,7 @@ export default function Home() {
             <div className='image-cover'>
                 <div className='flex'>
                     <div className='today-matchs'>
-                        <h2>Partidas de Hoje</h2>
+                        <h2 style={{'color': '#FFF'}}>Partidas de Hoje</h2>
                         {gamesToday.map((item, key) => (
                             <TodaysMatchs item={item} key={key} />
                         ))}

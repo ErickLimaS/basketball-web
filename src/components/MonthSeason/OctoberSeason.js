@@ -9,6 +9,8 @@ export default function OctoberSeason(item) {
     const season = item.season
     const id = item.id
 
+    console.log(item)
+
     useEffect(() => {
         const load = async () => {
             const { data } = await API.GetSelectSeasonOctober(season, id)
@@ -24,6 +26,7 @@ export default function OctoberSeason(item) {
                     {monthSeason.map((item, key) => (
                         <GameScore item={item} key={key} />
                     ))}
+                    {monthSeason.length === 0 && <h3 style={{'width': '200px','margin' : '2rem'}}>No Games</h3>}
                 </div>
             </div>
         </C.Container>

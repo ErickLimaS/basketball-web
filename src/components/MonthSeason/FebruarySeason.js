@@ -19,11 +19,12 @@ export default function FebruarySeason(item) {
     return (
         <C.Container>
             <div className='month-score'>
-                <h3>February/{season + 1}</h3>
+                <h3>February/{Number.parseInt(season) + 1}</h3>
                 <div className='month-score'>
                     {monthSeason.map((item, key) => (
                         <GameScore item={item} key={key} />
                     ))}
+                    {monthSeason.length === 0 && <h3 style={{'width': '200px','margin' : '2rem'}}>No Games</h3>}
                 </div>
             </div>
         </C.Container >

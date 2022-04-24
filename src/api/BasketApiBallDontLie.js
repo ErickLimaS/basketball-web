@@ -104,7 +104,6 @@ export default {
     GetPresentSeason: async (team) => {// fix year season
         try {
             const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${team}&seasons[]=2021&per_page=100`)
-            console.log(data)
             return data;
         }
         catch(error){
@@ -114,8 +113,7 @@ export default {
     // SEASON BEGINS IN OCTOBER, ENDS IN APRIL
     GetSelectSeasonOctober: async (season, id) => {
         try{
-            
-            const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${season}-10-01&end_date=${season}-10-30&per_page=100`)
+            const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${season}-10-22&end_date=${season}-10-30&per_page=100`)
 
             return data;
         }
@@ -126,7 +124,7 @@ export default {
     GetSelectSeasonNovember: async (season, id) => {
         try{
             
-            const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${season}-11-11&end_date=${season}-11-30&per_page=100`)
+            const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${season}-11-01&end_date=${season}-11-30&per_page=100`)
 
             return data;
         }
@@ -137,7 +135,7 @@ export default {
     GetSelectSeasonDecember: async (season, id) => {
         try{
             
-            const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${season}-12-11&end_date=${season}-12-30&per_page=100`)
+            const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${season}-12-01&end_date=${season}-12-31&per_page=100`)
 
             return data;
         }
@@ -147,7 +145,7 @@ export default {
     },
     GetSelectSeasonJanuary: async (season, id) => {// january needs to be set on next year
         try{
-            const seasonConverted = season + 1
+            const seasonConverted = Number.parseInt(season) + 1
 
             const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${seasonConverted}-01-01&end_date=${seasonConverted}-01-30&per_page=100`)
 
@@ -159,7 +157,7 @@ export default {
     },
     GetSelectSeasonFebruary: async (season, id) => {
         try{
-            const seasonConverted = season + 1
+            const seasonConverted = Number.parseInt(season) + 1
 
             const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${seasonConverted}-02-01&end_date=${seasonConverted}-02-28&per_page=100`)
 
@@ -171,7 +169,7 @@ export default {
     },
     GetSelectSeasonMarch: async (season, id) => {
         try{
-            const seasonConverted = season + 1
+            const seasonConverted = Number.parseInt(season) + 1
 
             const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${seasonConverted}-03-01&end_date=${seasonConverted}-03-30&per_page=100`)
 
@@ -183,7 +181,7 @@ export default {
     },
     GetSelectSeasonApril: async (season, id) => {
         try{
-            const seasonConverted = season + 1
+            const seasonConverted = Number.parseInt(season) + 1
 
             const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${id}&start_date=${seasonConverted}-04-01&end_date=${seasonConverted}-04-30&per_page=100`)
 

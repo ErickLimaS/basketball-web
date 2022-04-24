@@ -19,7 +19,7 @@ export default function MarchSeason(item) {
     return (
         <C.Container>
             <div className='month-score'>
-                <h3>March/{season + 1}</h3>
+                <h3>March/{Number.parseInt(season) + 1}</h3>
                 <div className='month-score'>
                     {monthSeason.map((item, key) => (
                         <GameScore item={item} key={key} />
