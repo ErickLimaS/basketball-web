@@ -31,13 +31,13 @@ export default {
         return data;
     },
     GetPlayerFromTeam: async (playerId, teamId, gameId) => {
-        try{
+        try {
 
-            const {data} = await Axios.get(`https://www.balldontlie.io/api/v1/stats?game_ids[]=${gameId}&team_ids[]=${teamId}&player_ids[]=${playerId}&per_page=100`)
+            const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/stats?game_ids[]=${gameId}&team_ids[]=${teamId}&player_ids[]=${playerId}&per_page=100`)
 
             return data;
         }
-        catch(error){
+        catch (error) {
             return console.log(`Error: ${error}`)
         }
     },
@@ -75,6 +75,12 @@ export default {
         const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/stats?game_ids[]=${gameId}&per_page=100`)
 
         return data;
+    },
+    SpecificGameScore: async (gameId) => {
+
+        const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/games/${gameId}`)
+        console.log(data)
+        return {data};
     },
     SpecificFinishedBasketGameByTeam: async (teamId) => {
 

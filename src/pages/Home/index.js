@@ -83,7 +83,6 @@ export default function Home() {
             document.getElementById(gamesYesterday[btnClick - 1].id
             ).style.display = "block";
 
-
         }
     }
 
@@ -121,8 +120,6 @@ export default function Home() {
                             <YesterdayHighlights item={item} key={key} />
                         ))}
                     </div>
-
-
                 </div>
             </div>
         </C.Container >

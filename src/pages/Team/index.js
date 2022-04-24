@@ -32,14 +32,14 @@ export default function Team() {
     else if (Number.parseInt(teamId) === 3) {
         logo = 'https://logotyp.us/files/brooklyn-nets.svg'
     }
-    else if (Number.parseInt(teamId) === 3) {
-        logo = 'https://logotyp.us/files/oklahoma-city-thunder.svg'
-    }
-    else if (Number.parseInt(teamId) === 5) {
+    else if (Number.parseInt(teamId) === 4) {
         logo = 'https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg'
     }
-    else if (Number.parseInt(teamId) === 6) {
+    else if (Number.parseInt(teamId) === 5) {
         logo = 'https://logotyp.us/files/chicago-bulls.svg'
+    }
+    else if (Number.parseInt(teamId) === 6) {
+        logo = 'https://logotyp.us/files/oklahoma-city-thunder.svg'
     }
     else if (Number.parseInt(teamId) === 7) {
         logo = 'https://logotyp.us/files/cleveland-cavaliers.svg'
@@ -167,7 +167,7 @@ export default function Team() {
                                 <input id='seasons'
                                     type='text'
                                     value={season}
-                                    placeholder='ex: 2013'
+                                    placeholder=''
                                     onChange={(e) => {
                                         setSeason(e.target.value)
                                     }}>

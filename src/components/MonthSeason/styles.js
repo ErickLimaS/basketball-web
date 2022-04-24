@@ -17,7 +17,7 @@ export const Container = styled.div`
 
         h3.month-heading{
             padding: 2.5rem 0 2.5rem 2rem;
-            background-color: #000000e3;
+            background-color: #000;
             top: 0;
             margin: 0;
             position: sticky;

@@ -9,6 +9,7 @@ export const Container = styled.div`
     font-size: 1.5rem;
     height: 100%;
 
+
     a{
         font-size: 1.2rem;
 
@@ -28,20 +29,26 @@ export const Container = styled.div`
         align-items:center;
         flex-direction: column;
         justify-content: center;
-        
     }
 
     .team {
         margin: 0.5rem 1rem;
+        width: 40%;
     }
 
     .score-and-teams{
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
         background-color: rgba(250,250,250, 0.9);
         border-radius: 8px;
         width: 80vh;
         height: 25vh;
+
+        :hover{
+            background-color: rgba(250,250,250, 1);
+        }
     }
     
     .team-home-visitant{
@@ -83,6 +90,7 @@ export const Container = styled.div`
                 }
             }
             .score{
+                padding: 1rem;
                 display: flex;
                 flex-direction: row;
                 align-items: center;

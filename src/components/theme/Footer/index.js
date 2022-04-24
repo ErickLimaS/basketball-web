@@ -7,8 +7,8 @@ export default function Footer() {
             <div className='about'>
                 <ul>
                     <li><a href='/sobre'>Sobre</a></li>
-                    <li><a href='https://github.com/ErickLimaS'>GitHub</a></li>
-                    <li><a href='https://www.balldontlie.io/'>API Usada</a></li>
+                    <li><a href='https://github.com/ErickLimaS' target='_blank' rel='noreferrer'>GitHub</a></li>
+                    <li><a href='https://www.balldontlie.io/' target='_blank' rel='noreferrer'>API Usada</a></li>
                 </ul>
             </div>
             <div className='disclaimer'>

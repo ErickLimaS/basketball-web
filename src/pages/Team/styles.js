@@ -65,7 +65,7 @@ export const Container = styled.div`
           
           ::-webkit-scrollbar-thumb:hover {
             background: #555; 
-          }
+        }
 
         .season-score{
             margin: 0 0 0 2rem;
