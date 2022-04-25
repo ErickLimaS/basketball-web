@@ -34,7 +34,7 @@ export const Container = styled.div`
     }
 
     .today-matchs {
-        height: 90vh;
+        height: 95vh;
         overflow: auto;
         overflow-x: hidden;
 

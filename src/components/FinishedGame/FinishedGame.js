@@ -76,9 +76,10 @@ export default function FinishedGame({ item }) {
                                 {item.home_team.id === 3 &&
                                     <img src='https://logotyp.us/files/brooklyn-nets.svg' alt={item.home_team.full_name}></img>}
                                 {item.home_team.id === 4 &&
-                                    <img src='https://logotyp.us/files/oklahoma-city-thunder.svg' alt={item.home_team.full_name}></img>}
-                                {item.home_team.id === 5 &&
                                     <img src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.home_team.full_name}></img>}
+                                {item.home_team.id === 5 &&
+                                    <img src='https://logotyp.us/files/oklahoma-city-thunder.svg' alt={item.home_team.full_name}></img>}
+
                                 {item.home_team.id === 6 &&
                                     <img src='https://logotyp.us/files/chicago-bulls.svg' alt={item.home_team.full_name}></img>}
                                 {item.home_team.id === 7 &&
@@ -162,9 +163,9 @@ export default function FinishedGame({ item }) {
                                 {item.visitor_team.id === 3 &&
                                     <img src='https://logotyp.us/files/brooklyn-nets.svg' alt={item.visitor_team.full_name}></img>}
                                 {item.visitor_team.id === 4 &&
-                                    <img src='https://logotyp.us/files/oklahoma-city-thunder.svg' alt={item.visitor_team.full_name}></img>}
+                                    <img className='img-from-other-links-tweaks' src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.visitor_team.full_name}></img>}
                                 {item.visitor_team.id === 5 &&
-                                    <img src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.visitor_team.full_name}></img>}
+                                    <img src='https://logotyp.us/files/oklahoma-city-thunder.svg' alt={item.visitor_team.full_name}></img>}
                                 {item.visitor_team.id === 6 &&
                                     <img src='https://logotyp.us/files/chicago-bulls.svg' alt={item.visitor_team.full_name}></img>}
                                 {item.visitor_team.id === 7 &&

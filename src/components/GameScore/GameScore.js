@@ -8,10 +8,10 @@ export default function GameScore({ item }) {
   console.log(item)
 
 
-  // const date = new Date(item.date.split("T")[0])
-  // const yyyy = date.getFullYear()
-  // const mm = date.getMonth() + 1
-  // const dd = date.getDate()
+  const date = new Date(item.date.split("T")[0])
+  const yyyy = date.getFullYear()
+  const mm = date.getMonth() + 1
+  const dd = date.getDate()
 
   // let team1 = []
   // let team2 = []
@@ -40,7 +40,7 @@ export default function GameScore({ item }) {
                   {item.home_team.id === 3 &&
                     <img src='https://logotyp.us/files/brooklyn-nets.svg' alt={item.home_team.full_name}></img>}
                   {item.home_team.id === 4 &&
-                    <img src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.home_team.full_name}></img>}
+                    <img className='img-from-other-links-tweaks' src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.home_team.full_name}></img>}
                   {item.home_team.id === 5 &&
                     <img src='https://logotyp.us/files/chicago-bulls.svg' alt={item.home_team.full_name}></img>}
                   {item.home_team.id === 8 &&
@@ -52,7 +52,7 @@ export default function GameScore({ item }) {
                   {item.home_team.id === 9 &&
                     <img src='https://logotyp.us/files/denver-nuggets.svg' alt={item.home_team.full_name}></img>}
                   {item.home_team.id === 10 &&
-                    <img className='img-from-other-links-tweaks img-not-svg' src='https://upload.wikimedia.org/wikipedia/sco/0/01/Golden_State_Warriors_logo.svg' alt={item.home_team.full_name}></img>}
+                    <img className='img-not-svg' src='https://upload.wikimedia.org/wikipedia/sco/0/01/Golden_State_Warriors_logo.svg' alt={item.home_team.full_name}></img>}
                   {item.home_team.id === 11 &&
                     <img src='https://logotyp.us/files/houston-rockets.svg' alt={item.home_team.full_name}></img>}
                   {item.home_team.id === 12 &&
@@ -107,7 +107,7 @@ export default function GameScore({ item }) {
                       X
                     </p>
                     <div className='match-time active'>
-                      {/* <p>{dd}/{mm}/{yyyy}</p> */}
+                      <p>{dd}/{mm}/{yyyy}</p>
                     </div>
                   </div>
                   <div className='score'>
@@ -126,7 +126,7 @@ export default function GameScore({ item }) {
                   {item.visitor_team.id === 3 &&
                     <img src='https://logotyp.us/files/brooklyn-nets.svg' alt={item.visitor_team.full_name}></img>}
                   {item.visitor_team.id === 4 &&
-                    <img src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.visitor_team.full_name}></img>}
+                    <img className='img-from-other-links-tweaks' src='https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg' alt={item.visitor_team.full_name}></img>}
                   {item.visitor_team.id === 5 &&
                     <img src='https://logotyp.us/files/chicago-bulls.svg' alt={item.visitor_team.full_name}></img>}
                   {item.visitor_team.id === 6 &&
@@ -138,7 +138,7 @@ export default function GameScore({ item }) {
                   {item.visitor_team.id === 9 &&
                     <img src='https://logotyp.us/files/denver-nuggets.svg' alt={item.visitor_team.full_name}></img>}
                   {item.visitor_team.id === 10 &&
-                    <img className='img-from-other-links-tweaks img-not-svg' src='https://upload.wikimedia.org/wikipedia/sco/0/01/Golden_State_Warriors_logo.svg' alt={item.visitor_team.full_name}></img>}
+                    <img className='img-not-svg' src='https://upload.wikimedia.org/wikipedia/sco/0/01/Golden_State_Warriors_logo.svg' alt={item.visitor_team.full_name}></img>}
                   {item.visitor_team.id === 11 &&
                     <img src='https://logotyp.us/files/houston-rockets.svg' alt={item.visitor_team.full_name}></img>}
                   {item.visitor_team.id === 12 &&

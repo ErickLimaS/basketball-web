@@ -47,6 +47,12 @@ export const Container = styled.div`
         align-items: center;
         background-color: #FFF;
     }
+    
+    img.img-from-other-links-tweaks{
+        width: 100%;
+        height: 70%;
+       
+    }
 
     .all-season-info{
         overflow: auto;

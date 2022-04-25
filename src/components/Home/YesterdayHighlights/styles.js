@@ -19,27 +19,48 @@ export const Container = styled.div`
 
     .score-and-teams {
         color: #000;
-        background-color: #c0c0c0;
+        background-color: #dddddd;
         border-radius: 10px;
         display: flex;
         width: 100%;
         justify-content: center;
         align-items: center;
         font-size: 1.5rem;
+        border: 1px solid rgba(0,0,0,.1);
+        transition: all 150ms ease-out;
+
+        :hover{
+            border: 1px solid black;
+            background-color: white;
+
+            img{
+                background-color: #dddddd;
+                border: 1px solid black;
+                border-radius: 40000px;
+            }
+        }
     }
 
     .flex{
         display: flex;
         align-items:center;
     }
+
     .flex-2{
         display: flex;
         align-items:center;
         flex-direction: column;
+        
     }
 
     .team {
         margin: 0.5rem 1rem;
+        width: 50%;
+        height: 100%;
+
+        h2{
+            width: 100%;
+        }
     }
 
     .status * {
@@ -78,14 +99,19 @@ export const Container = styled.div`
     }
 
     img {
-        height: 100%;
-        width: 90%;
+        width: 200px;
+        height: 200px;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 40000px;
     }
     
 
     .team-home-visitant{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        height: 50%;
     }
 
     .img-from-other-links-tweaks{
@@ -95,8 +121,13 @@ export const Container = styled.div`
 
     h2 {
         font-size: 2rem;
-        font-weight: 600;
+        font-weight: 400;
         margin: 1rem;
+        margin: 2rem 0;
+
+        :hover{
+            color: rgba(0,0,0,.8);
+        }
     }
 
     .score h3{

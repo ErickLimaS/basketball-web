@@ -57,7 +57,8 @@ export const Container = styled.div`
         align-items: center;
         align-content: center;
     
-        img{
+        img.img-from-other-links-tweaks{
+            width: 85%;
         }
 
         .img-not-svg{

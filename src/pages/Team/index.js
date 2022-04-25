@@ -147,7 +147,7 @@ export default function Team() {
                 <div className='about-team'>
                     <h1>{basketTeam.full_name}</h1>
                     <div className='img'>
-                        <img src={logo} alt={basketTeam.full_name} />
+                        <img className={Number.parseInt(teamId) === 4 || Number.parseInt(teamId) === 10 ? 'img-from-other-links-tweaks' : ''} src={logo} alt={basketTeam.full_name} />
                     </div>
                     <aside>
                         <ul>

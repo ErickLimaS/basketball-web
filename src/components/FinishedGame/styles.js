@@ -24,8 +24,13 @@ export const Container = styled.div`
         justify-content: space-around;
 
         img{
-            width: 50rem;
-            height: 50rem;
+            width: 150%;
+            height: 100%;
+        }
+
+        .img-from-other-links-tweaks{
+            width: 65%;
+            height: 75%;
         }
 
         .team-home-visitant{
