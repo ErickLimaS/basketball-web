@@ -23,6 +23,12 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
         width: 100%;
+        border: 1px solid black;
+
+        :hover{
+            background-color: rgba(250,250,250);
+            color: #000;
+        }
 
         h3{
             font-weight: 600;

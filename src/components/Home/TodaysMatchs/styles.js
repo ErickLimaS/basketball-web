@@ -12,8 +12,9 @@ export const Container = styled.div`
 
     a{
         color: #000!important;
-    }
 
+     }
+     
     section {
         color: #000;
         background-color: #ffffffd1;
@@ -90,7 +91,7 @@ export const Container = styled.div`
 
     h2 {
         font-size: 2rem;
-        font-weight: 600;
+        font-weight: 400!important;
         margin: 1rem;
     }
 

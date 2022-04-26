@@ -14,9 +14,8 @@ export default function Header() {
             </div>
             <div className='nav-links'>
                 <nav>
-                    <Link to='#'>About my Team</Link>
-                    <Link to='#'>Statistics</Link>
-                    <Link to='#'>Match Results</Link>
+                    <Link to='/search/team'>Search Team</Link>
+                    <Link to='/search/player'>Search Player</Link>
                 </nav>
             </div>
         </C.Container>

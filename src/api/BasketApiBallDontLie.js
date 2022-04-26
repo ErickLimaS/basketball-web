@@ -26,7 +26,7 @@ export default {
     },
     SpecificBasketPlayer: async (playerId) => {
 
-        const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/players/${playerId}`)
+        const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/players?search=${playerId}&per_page=100`)
 
         return data;
     },
