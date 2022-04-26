@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import * as C from './styles'
 import Axios from 'axios'
 import API from '../../api/BasketApiBallDontLie';
-import GameScore from '../../components/GameScore/GameScore';
 import OctoberSeason from '../../components/MonthSeason/OctoberSeason';
 import NovemberSeason from '../../components/MonthSeason/NovemberSeason';
 import DecemberSeason from '../../components/MonthSeason/DecemberSeason';

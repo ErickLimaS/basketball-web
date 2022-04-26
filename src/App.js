@@ -3,6 +3,7 @@ import Footer from './components/theme/Footer';
 import Header from './components/theme/Header';
 import Game from './pages/Game';
 import Home from './pages/Home';
+import Player from './pages/Player';
 import Team from './pages/Team';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <main>
         <Routes>
+          <Route path='/player/:id' element={<Player />} />
           <Route path='/game/:id' element={<Game />} />
           <Route path='/team/:id' element={<Team />} />
           <Route path='/' element={<Home />} />

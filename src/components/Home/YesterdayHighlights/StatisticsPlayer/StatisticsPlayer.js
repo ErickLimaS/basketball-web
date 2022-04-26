@@ -12,7 +12,7 @@ export default function StatisticsPlayer(item) {
 
                     <div className='name-and-position'>
                         <div>
-                            <Link to={`player?${item.team1.id}`}><h3>{item.team1.player.first_name} {item.team1.player.last_name}  {item.team1.player.position && `| ${item.team1.player.position}`}</h3></Link>
+                            <Link to={`player/${item.team1.player.id}`}><h3>{item.team1.player.first_name} {item.team1.player.last_name}  {item.team1.player.position && `| ${item.team1.player.position}`}</h3></Link>
                         </div>
                     </div>
                     <div className='numbers'>
@@ -70,7 +70,7 @@ export default function StatisticsPlayer(item) {
                     </div>
                     <div className='name-and-position'>
                         <div>
-                            <Link to={`player?${item.team2.id}`}><h3>{item.team2.player.first_name} {item.team2.player.last_name} | {item.team2.player.position}</h3></Link>
+                            <Link to={`player/${item.team2.player.id}`}><h3>{item.team2.player.first_name} {item.team2.player.last_name} | {item.team2.player.position}</h3></Link>
                         </div>
                     </div>
                 </div>

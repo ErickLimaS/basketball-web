@@ -7,7 +7,7 @@ import { Link, useParams } from 'react-router-dom'
 export default function FinishedGame({ item }) {
     console.log(item)
 
-    const gameId = useParams()
+    let gameId = useParams()
 
     const [gameStats, setGameStats] = useState([])
 
