@@ -14,7 +14,6 @@ export default function Header() {
             </div>
             <div className='nav-links'>
                 <nav>
-                    <Link to='/search/team'>Search Team</Link>
                     <Link to='/search/player'>Search Player</Link>
                 </nav>
             </div>

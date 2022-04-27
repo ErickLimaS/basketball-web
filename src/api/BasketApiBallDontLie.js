@@ -5,7 +5,7 @@ import React from "react";
 export default {
 
     //teams
-    BasketTeams: async () => {
+    GetBasketTeams: async () => {
 
         const { data } = await Axios.get('https://www.balldontlie.io/api/v1/teams')
 

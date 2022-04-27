@@ -73,7 +73,7 @@ export default function Player() {
                 {inputSearch !== undefined ? (
                     <h2>Results to {inputSearch}</h2>
                 ) : (
-                    <h2>Rusults to All Players</h2>
+                    <h2>Results to All Players</h2>
                 )}
             </div>
             <div className='players-list'>

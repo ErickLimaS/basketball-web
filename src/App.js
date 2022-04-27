@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import Player from './pages/Player';
 import SearchPlayer from './pages/Search/Player';
 import Team from './pages/Team';
-import SearchTeam from './pages/Search/Team';
 
 function App() {
 
@@ -15,7 +14,6 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path='/search/team' element={<SearchTeam />} />
           <Route path='/search/player' element={<SearchPlayer />} />
           <Route path='/player/:id' element={<Player />} />
           <Route path='/game/:id' element={<Game />} />

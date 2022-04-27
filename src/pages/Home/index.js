@@ -4,10 +4,12 @@ import * as C from './styles'
 import API from '../../api/BasketApiBallDontLie';
 import TodaysMatchs from '../../components/Home/TodaysMatchs/TodaysMatchs';
 import YesterdayHighlights from '../../components/Home/YesterdayHighlights/YesterdayHighlights';
+import Team from '../../components/Home/Team/Team';
 
 export default function Home() {
     const [gamesToday, setGamesToday] = useState([])
     const [gamesYesterday, setGamesYesterday] = useState([])
+    const [teams, setTeams] = useState([])
     const [btnClick, setBtnClick] = useState(1)
 
     useEffect(() => {
@@ -23,6 +25,12 @@ export default function Home() {
             setGamesYesterday(data)
         }
         yesterday()
+        const load3 = async () => {
+            const { data } = await API.GetBasketTeams()
+
+            setTeams(data)
+        }
+        load3()
 
     }, [])
 
@@ -91,7 +99,7 @@ export default function Home() {
             <div className='image-cover'>
                 <div className='flex'>
                     <div className='today-matchs'>
-                        <h2 style={{'color': '#FFF'}}>Partidas de Hoje</h2>
+                        <h2 style={{ 'color': '#FFF' }}>Partidas de Hoje</h2>
                         {gamesToday.map((item, key) => (
                             <TodaysMatchs item={item} key={key} />
                         ))}
@@ -103,6 +111,16 @@ export default function Home() {
                 </div>
                 <small>Photo by <a href='https://pixabay.com/users/vityuk-lena-6431541/' target='_blank' rel='noreferrer'>vityuk-lena</a></small>
             </div>
+
+            <div className='teams'>
+                <h3>See What Games Your Team Played This Season</h3>
+                <div className='keyframe-teams'>
+                    {teams.map((item, key) => (
+                        <Team item={item} key={key} />
+                    ))}
+                </div>
+            </div>
+
             <div className='yesterday-highlight-games'>
                 <h2>Destaques das Últimas Partidas</h2>
                 <div className='flex-2'>

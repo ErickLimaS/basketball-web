@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import photo from '../../img/home-img.jpg'
 
 export const Container = styled.div`
+
+    overflow-x: hidden;
     
     .image-cover{
         background-position: center center;   
@@ -126,6 +128,35 @@ export const Container = styled.div`
                 border: 2px solid #000;
             }
          }
+    }
+
+    .teams{
+        display: flex;
+        flex-direction: column;
+
+        h3{
+            font-weight 400;
+            font-size: 2.8rem;
+            align-self: center;
+
+        }
+
+        .keyframe-teams{
+            margin: 1rem 0;
+            display: flex;
+            position: relative;
+            animation-name: infiniterow;
+            animation-duration: 40s;  
+            animation-delay: 5s;  
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes infiniterow{
+            from {left: 0px;}
+            to {left: -2700px;}
+
+        }
     }
     
 `

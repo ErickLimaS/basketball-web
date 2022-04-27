@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import * as C from './styles'
 
 export default function YesterdayHighlights({ item }) {
+
+  console.log(item)
   return (
     <C.Container>
       <section>
@@ -75,17 +77,17 @@ export default function YesterdayHighlights({ item }) {
 
         <div className='status'>
           <div className='score-results'>
-            <div className={item.time === '' && item.status === 'Final' ? 'score' : 'score  deactiveted'}>
+            <div className={ item.status === 'Final' ? 'score  deactiveted' : 'score'}>
               <h3>{item.home_team_score}</h3>
             </div>
             <p>
               X
             </p>
-            <div className={item.time === '' && item.status !== 'Final' ? 'score deactiveted' : 'score'}>
+            <div className={item.status !== 'Final' ? 'score' : 'score  deactiveted'}>
               <h3>{item.visitor_team_score}</h3>
             </div>
           </div>
-          <div className={item.time === '' ? 'match-time' : 'match-time active'}>
+          <div className={item.status === '1st Qtr' || item.status === '2st Qtr' || item.status === '3st Qtr' || item.status === '4st Qtr' || item.status !== 'Final' || item.time === '' ? 'match-time active' : 'match-time'}>
             <p>{item.status}</p>
             <p>{item.time}</p>
           </div>

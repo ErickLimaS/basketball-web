@@ -34,7 +34,7 @@ export const Container = styled.div`
             background-color: white;
 
             img{
-                background-color: #dddddd;
+                background-color: #ededed;
                 border: 1px solid black;
                 border-radius: 40000px;
             }
