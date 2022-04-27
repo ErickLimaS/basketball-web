@@ -221,13 +221,17 @@ export default function YesterdayHighlights({ item }) {
             </div>
           </Link>
 
+          <h2>Players</h2>
           <div className='statistics-players'>
-            <div>
+            <div className='team-players'>
+              <Link to={`/team/${item.home_team.id}`}><h4>{item.home_team.full_name}</h4></Link>
               {team2.map((team2, key) => (
                 <StatisticsPlayer team2={team2} key={team2.id} />
               ))}
             </div>
-            <div>
+            <hr/>
+            <div className='team-players'>
+            <Link to={`/team/${item.visitor_team.id}`}><h4>{item.visitor_team.full_name}</h4></Link>
               {team1.map((team1, key) => (
                 <StatisticsPlayer team1={team1} key={team1.id} />
               ))}

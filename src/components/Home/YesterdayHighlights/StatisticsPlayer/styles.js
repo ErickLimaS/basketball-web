@@ -40,6 +40,11 @@ export const Container = styled.div`
         display: flex;
         flex-direction: row;
         border: 1px solid #000;
+
+        @media(max-width: 760px){
+            display: none;
+            margin: 1rem;
+        }
         
         
         div {
@@ -59,4 +64,9 @@ export const Container = styled.div`
         flex-direction: row-reverse;
     }
 
+    .name{
+        @media(max-width: 320px){
+            width:100%;
+        }
+    }
 `

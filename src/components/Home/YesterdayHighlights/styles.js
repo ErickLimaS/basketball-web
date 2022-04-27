@@ -10,6 +10,11 @@ export const Container = styled.div`
     height: 100%;
     width: 100%;
 
+    @media(max-width: 760px){
+        width: 100%;
+        margin: 0rem;
+    }
+
     div.section-map {
         display: flex;
         flex-direction: column;
@@ -28,6 +33,50 @@ export const Container = styled.div`
         font-size: 1.5rem;
         border: 1px solid rgba(0,0,0,.1);
         transition: all 150ms ease-out;
+
+        @media(max-width: 720px){
+            width: min-content;
+
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @media(max-width: 420px){
+            flex-direction: column;
+            padding: 2rem;
+
+            div.flex-2.team{
+                width: 100%;
+                flex-direction: row-reverse;
+            }
+            div.team-home-visitant{
+                width: 100%;
+                flex-direction: row-reverse;
+            }
+            .status{
+                .score-results{
+                    flex-direction: column;
+                }
+                .match-time{
+                    display: none;
+                }
+
+            }
+
+            img{
+                width: 100px;
+                height: 100px;
+            }
+
+            .team-home-visitant{
+            }
+
+            .score-results *{
+                font-size: 3rem;
+            }
+        }
 
         :hover{
             border: 1px solid black;
@@ -133,6 +182,10 @@ export const Container = styled.div`
     .score h3{
         font-size: 5rem;
         font-weight: 500;
+
+        @media(max-width: 426px){
+            font-size: 3.6rem;
+        }
     }
 
     .statistics-players{
@@ -140,6 +193,39 @@ export const Container = styled.div`
         flex-direction: row;
         justify-content: space-between;
         margin: 0 2rem;
+        width: 100%;
+
+        div.team-players{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            a:hover{
+                text-decoration: underline;
+            }
+
+            h4{
+                font-weight: 600;
+            }
+        }
+        
+        @media(max-width: 520px){
+            div.team-players{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+
+                .numbers{
+                    display: none;
+
+                }
+            }
+        }
+        
 
         div.name-and-position{
             margin: 0 20px;

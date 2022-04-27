@@ -41,6 +41,10 @@ export const Container = styled.header`
             padding: 1rem;
             margin: 0 1rem;
         }
+
+        @media(max-width: 360px){
+            padding: 0rem;
+        }
     }
 
     .logo-name{
@@ -51,6 +55,10 @@ export const Container = styled.header`
     .nav-links{
         right: -13rem;
         position: relative;
+
+        @media(max-width: 760px){
+            right: 0;
+        }
     }
 
     img{
@@ -60,4 +68,5 @@ export const Container = styled.header`
     .sticky{
        
     }
+
 `

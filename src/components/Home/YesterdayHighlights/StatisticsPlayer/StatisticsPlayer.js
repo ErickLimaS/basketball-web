@@ -9,9 +9,8 @@ export default function StatisticsPlayer(item) {
         return (
             <C.Container>
                 <div className='player-stats'>
-
                     <div className='name-and-position'>
-                        <div>
+                        <div className='name'>
                             <Link to={`player/${item.team1.player.id}`}><h3>{item.team1.player.first_name} {item.team1.player.last_name}  {item.team1.player.position && `| ${item.team1.player.position}`}</h3></Link>
                         </div>
                     </div>

@@ -106,7 +106,7 @@ export default function Home() {
 
                     </div>
                     <div className='header-title'>
-                        <h1>Acompanhe os jogos, as estatisticas e os jogadores do momento aqui.</h1>
+                        <h1>Acompanhe os jogos, as estatísticas e os jogadores do momento aqui.</h1>
                     </div>
                 </div>
                 <small>Photo by <a href='https://pixabay.com/users/vityuk-lena-6431541/' target='_blank' rel='noreferrer'>vityuk-lena</a></small>

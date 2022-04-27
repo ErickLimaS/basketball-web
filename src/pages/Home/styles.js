@@ -18,6 +18,11 @@ export const Container = styled.div`
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+
+        @media(max-width: 900px){
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
     }
 
     .flex-2{
@@ -32,6 +37,18 @@ export const Container = styled.div`
         h1{
             font-size: 6.5rem;
             color: #ff4a23;
+        }
+
+        @media(max-width: 620px){
+
+            h1{
+            font-size: 4.6rem;
+            }
+        }
+
+        @media(max-width: 900px){
+            width: revert;
+            margin: 2rem;
         }
     }
 
@@ -60,6 +77,14 @@ export const Container = styled.div`
             margin: 0.5rem 0 0 2rem;
             font-size: 2.4rem;
             font-weight: 500;
+        }
+
+        @media(max-width: 990px){
+            height: initial;
+            overflow: auto;
+            overflow-x: hidden;
+            width: -webkit-fill-available;
+            height: initial;
         }
     }
 
