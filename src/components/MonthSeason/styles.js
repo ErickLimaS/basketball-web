@@ -3,11 +3,15 @@ import styled from 'styled-components'
 export const Container = styled.div`
 
     .month-score{
-        width: min-content;
+        width: min-width;
         color: #FFF;
         font-size: 2.2rem;
         display: flex;
         flex-direction: column;
+
+        @media(max-width: 420px){
+            width: 320px;
+        }
         
 
         h3{
@@ -22,6 +26,10 @@ export const Container = styled.div`
             margin: 0;
             position: sticky;
             border-radius: 10px 0 0 10px;
+
+            @media(max-width: 940px){
+                border-radius: 10px;
+            }
         }
         
         .scores{

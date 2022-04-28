@@ -34,6 +34,9 @@ export const Container = styled.div`
     .team {
         margin: 0.5rem 1rem;
         width: 40%;
+
+        @media(max-width: 420px){
+        }
     }
 
     .score-and-teams{
@@ -45,6 +48,12 @@ export const Container = styled.div`
         border-radius: 8px;
         width: 80vh;
         height: 25vh;
+
+        @media(max-width: 520px){
+            flex-direction: column;
+            height: 100%;
+            width: 35vh;
+        }
 
         :hover{
             background-color: rgba(250,250,250, 1);
@@ -77,6 +86,10 @@ export const Container = styled.div`
             flex-direction: row;
             align-items: center;
             justify-content: center;
+
+            @media(max-width: 420px){
+                flex-direction: column;
+            }
 
             .versus {
                 display: flex;

@@ -37,7 +37,7 @@ export const Container = styled.div`
 
             .all-season-info{
 
-                @media(max-width: 820px){
+                @media(max-width: 940px){
                     width: -webkit-fill-available;
                 }
 
@@ -65,6 +65,17 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media(max-width: 940px){
+            div{
+                margin: 0 1rem;
+            }
+        }
+
+        @media(max-width: 640px){
+            flex-direction: column!important;
+            margin: 1rem;
+        }
 
         ul{
             padding: 0;
@@ -99,6 +110,20 @@ export const Container = styled.div`
     .all-season-info{
         overflow: auto;
 
+        @media(max-width: 940px){
+            overflow: hidden;
+            width: initial;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            div.season-score{
+                margin: 0.5rem;
+            }
+
+        }
+
         ::-webkit-scrollbar {
             height: 10px;
           }
@@ -129,6 +154,10 @@ export const Container = styled.div`
                     display: flex;
                     flex-direction: row;
                     align-items: center;
+
+                    @media(max-width: 940px){
+                        border-radius: 10px;
+                    }
 
                     *{
                         margin: 0.5rem;
@@ -170,6 +199,17 @@ export const Container = styled.div`
                 align-items: center;
                 width: max-content;
                 overflow: hiden;
+
+                @media(max-width: 420px){
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+
+                    div.grid-item {
+                        height: 90vh;
+                        overflow: revert;
+                    }
+                }
                 
                 div.grid-item {
                     height: 90vh;
