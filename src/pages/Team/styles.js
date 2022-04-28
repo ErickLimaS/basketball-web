@@ -10,7 +10,49 @@ export const Container = styled.div`
         padding: 0 0 0 2rem;
         background-color: rgba(0, 0, 9, 0.8);
         
-        
+        h1.heading1-mobile{
+            display: none;
+        }
+
+        @media(max-width: 940px){
+            flex-direction: column;
+            padding: 0;
+
+            .about-team{
+                border-right: 0;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-direction: row;
+                height: initial;
+                width: -webkit-fill-available;
+
+                h1.heading1-desktop{
+                    display: none;
+                }
+                h1.heading1-mobile{
+                    display: block;
+                }
+
+            }
+
+            .all-season-info{
+
+                @media(max-width: 820px){
+                    width: -webkit-fill-available;
+                }
+
+                div.game-statistics{
+                    display: flex!important;
+
+                    div.grid-item{
+                        height: initial!important;
+                        width: max-content!important;
+                    }
+                    .score-and-team{
+                    }
+                }
+             }
+        }
     }
 
     .about-team{
@@ -129,7 +171,6 @@ export const Container = styled.div`
                 width: max-content;
                 overflow: hiden;
                 
-
                 div.grid-item {
                     height: 90vh;
                     overflow: auto;

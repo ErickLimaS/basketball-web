@@ -144,12 +144,15 @@ export default function Team() {
         }}>
             <div className='team-page'>
                 <div className='about-team'>
-                    <h1>{basketTeam.full_name}</h1>
+                    <h1 className='heading1-desktop'>{basketTeam.full_name}</h1>
                     <div className='img'>
                         <img className={Number.parseInt(teamId) === 4 || Number.parseInt(teamId) === 10 ? 'img-from-other-links-tweaks' : ''} src={logo} alt={basketTeam.full_name} />
                     </div>
                     <aside>
                         <ul>
+                            <li>
+                                <h1 className='heading1-mobile'>{basketTeam.full_name}</h1>
+                            </li>
                             <li>City: <span>{basketTeam.city}</span></li>
                             <li><span>{basketTeam.conference}</span> Conference</li>
                             <li>Division: <span>{basketTeam.division}</span></li>

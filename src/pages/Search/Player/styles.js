@@ -7,7 +7,6 @@ export const Container = styled.div`
 
         background-color: rgba(0,0,0,.5);
         border-radius: 4px;
-        padding: 3rem!important;
         transition: all ease-in 250ms;
 
     }
@@ -19,6 +18,17 @@ export const Container = styled.div`
             padding: 0;
             margin: 0;
             transition: all ease-in 250ms;
+        }
+
+        .first-content{
+
+            padding: 3rem;
+
+            @media(max-width: 420px){
+                width: -webkit-fill-available;
+                padding: 0;
+                margin: 0;
+            }
         }
 
         height: 80vh;
@@ -58,9 +68,21 @@ export const Container = styled.div`
             justify-content: center;
             transition: all ease-in 250ms;
 
+            
+
+            @media(max-width: 420px){
+                div{
+                    width: initial;
+                    *{
+                        margin: 1rem 0;
+                    }
+                }
+            }
+
             *{
                 margin-left: 1rem;
                 margin-right: 1rem;
+
             }
 
             label{
@@ -74,6 +96,10 @@ export const Container = styled.div`
                 border-radius: 4px;
                 border: 0;
                 padding: 0.5rem;
+
+                @media(max-width: 320px){
+                    width: auto;
+                }
             }
 
             a{
@@ -118,7 +144,25 @@ export const Container = styled.div`
         display: grid;
         grid-template-columns: auto auto auto auto auto;
 
-        
+        @media(max-width: 1363px){
+            grid-template-columns: auto auto auto auto;
+            justify-content: center;
+        }
+
+        @media(max-width: 1020px){
+            grid-template-columns: auto auto auto;
+            justify-content: center;
+        }
+
+        @media(max-width: 820px){
+            grid-template-columns: auto auto;
+            justify-content: center;
+        }
+
+        @media(max-width: 580px){
+            grid-template-columns: initial;
+            justify-content: center;
+        }
 
         .player{
             margin: 2rem;
