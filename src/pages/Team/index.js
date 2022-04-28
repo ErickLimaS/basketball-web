@@ -122,7 +122,6 @@ export default function Team() {
         const load2 = async () => {
             const { data } = await API.GetPresentSeason(teamId)
             setChosenSeason(data)
-            console.log(chosenSeason)
         }
         load2()
     }, [])
@@ -135,7 +134,6 @@ export default function Team() {
         console.log(seasonAux)
         console.log(chosenSeason)
     }
-    console.log(basketTeam)
 
     return (
         <C.Container style={{

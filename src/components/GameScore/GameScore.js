@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom'
 export default function GameScore({ item }) {
 
   const [gameStats, setGameStats] = useState([])
-  console.log(item)
-
 
   const date = new Date(item.date.split("T")[0])
   const yyyy = date.getFullYear()

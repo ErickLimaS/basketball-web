@@ -2,17 +2,54 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 
-    .player-info{
+    
 
+    .player-info{
+        height: 80vh;
         display: flex;
         flex-direction: row;
         color: #FFF;
+
+        @media(max-width: 726px){
+            height: initial;
+            display: flex;
+            flex-direction: column;
+
+        }
+
 
         div.img{
             padding: 2rem;
             background-color: rgba(0,0,0,.9);
             
             width: 30%;
+            @media(max-width: 726px){
+                height: 50vh;
+                width: fit-content;
+                display: flex;
+                justify-content: center;
+
+                img{
+                    width: 35%!important;
+                }
+            }
+
+            @media(max-width: 426px){
+                width: fit-content;
+                display: flex;
+                justify-content: center;
+
+                img{
+                    width: fit-content;
+                    width: 80%!important;
+                }
+            }
+
+            @media(max-width: 1365px){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
             img{
                 width: 80%;
@@ -25,6 +62,26 @@ export const Container = styled.div`
             padding: 2rem;   
             background-color: rgba(0,0,0,.9);
             width: 45%;
+
+            @media(max-width: 426px){
+                width: 100%;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+            }
+
+            @media(max-width: 726px){
+                width: 100%;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+            }
 
             *{
                 font-weight: 200;
@@ -57,6 +114,11 @@ export const Container = styled.div`
         .last-game-stats{
             width: 25%;
             background-color: rgba(0,0,0,.9);
+
+            @media(max-width: 826px){
+                width: inherit;
+                padding: 1rem;
+            }
             
             *{
                 font-weight: 600;

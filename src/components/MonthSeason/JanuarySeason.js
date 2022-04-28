@@ -8,15 +8,11 @@ export default function JanuarySeason(item) {
 
     const season = item.season
     const id = item.id
-    console.log(season)
-
 
     useEffect(() => {
         const load = async () => {
             const { data } = await API.GetSelectSeasonJanuary(season, id)
             setMonthSeason(data)
-            console.log(data)
-            console.log(monthSeason)
         }
         load()
     }, [id, season])

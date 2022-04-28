@@ -5,7 +5,6 @@ import StatisticsPlayer from './StatisticsPlayer/StatisticsPlayer'
 import { Link } from 'react-router-dom'
 
 export default function YesterdayHighlights({ item }) {
-  console.log(item)
 
   const [gameStats, setGameStats] = useState([])
 

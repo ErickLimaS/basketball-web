@@ -1,6 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
 import Axios from "axios";
-import React from "react";
 
 export default {
 
@@ -52,8 +51,6 @@ export default {
             return console.log(`Error: ${error}`)
         }
     },
-
-    
     // games
     AllBasketGames: async () => {
 
@@ -93,7 +90,7 @@ export default {
 
         const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/games/${gameId}`)
         console.log(data)
-        return {data};
+        return { data };
     },
     SpecificFinishedBasketGameByTeam: async (teamId) => {
 
@@ -131,15 +128,17 @@ export default {
             return console.log(`erro ${error}`)
         }
     },
-    GetPresentSeason: async (team) => {// fix year season
+    GetPresentSeason: async (team) => {
         try {
             const date = new Date()
 
-            console.log(date.getMonth())
-            // if (date.getMonth() === )
-
-            const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${team}&seasons[]=2021&per_page=100`)
-            return data;
+            if ((date.getMonth() + 1) === 7 || (date.getMonth() + 1) === 8 || (date.getMonth() + 1) === 9) {
+                const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${team}&seasons[]=${date.getFullYear() + 1}&per_page=100`)
+                return data;
+            } else {
+                const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/games?team_ids[]=${team}&seasons[]=${date.getFullYear()}&per_page=100`)
+                return data;
+            }
         }
         catch (error) {
             return console.log(`erro ${error}`)

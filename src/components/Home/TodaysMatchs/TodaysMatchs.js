@@ -4,7 +4,6 @@ import * as C from './styles'
 
 export default function YesterdayHighlights({ item }) {
 
-  console.log(item)
   return (
     <C.Container>
       <section>

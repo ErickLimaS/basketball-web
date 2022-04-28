@@ -72,7 +72,6 @@ export default function Home() {
         const gamesLength = gamesYesterday.length - 1
         // console.log(gamesLength)
         // console.log(btnClick)
-        setBtnClick(btnClick - 1)
 
         if (btnClick < 1) {
 
@@ -85,6 +84,7 @@ export default function Home() {
             ).style.display = "block";
         }
         else {
+            setBtnClick(btnClick - 1)
             // console.log('else')
             document.getElementById(gamesYesterday[btnClick].id
             ).style.display = "none";
