@@ -266,7 +266,6 @@ export default function Game() {
 
             <div className='teams-names'>
                 <h2>Players on This Match</h2>
-                {isFetch === true && <h3>{gameScore.home_team.name} Vs {gameScore.visitor_team.name}</h3>}
             </div>
 
             <div className='players-statistics'>
@@ -274,6 +273,8 @@ export default function Game() {
                     'background-image': `url(${logo})`, 'background-repeat': 'no-repeat', 'background-size': 'auto',
                     'background-position': 'center'
                 }}>
+                    {isFetch === true && <h3>{gameScore.home_team.full_name}</h3>}
+
                     {team2.map((team2, key) => (
                         <GameStatistics team2={team2} key={team2.id} />
                     ))}
@@ -283,6 +284,7 @@ export default function Game() {
                     'background-image': `url(${logo2})`, 'background-repeat': 'no-repeat', 'background-size': 'auto',
                     'background-position': 'center'
                 }}>
+                    {isFetch === true && <h3>{gameScore.visitor_team.full_name}</h3>}
 
                     {team1.map((team1, key) => (
                         <GameStatistics team1={team1} key={team1.id} />

@@ -16,6 +16,15 @@ export const Container = styled.div`
 
     .flex-2{
         width: 45%;
+        @media(max-width: 900px){
+            width: 250px;
+            height: 180px;
+        }
+
+        @media(max-width: 600px){
+            width: 150px;
+            height: 150px;
+        }
     }
 
     .score-and-teams{
@@ -26,11 +35,35 @@ export const Container = styled.div`
         img{
             width: 150%;
             height: 100%;
+
+            @media(max-width: 1365px){
+                width: 100%;
+                height: inherit;
+            }
+
+            @media(max-width: 900px){
+                width: 200%;
+                height: inherit;
+            }
+
+            @media(max-width: 600px){
+                width: 100%;
+                height: inherit;
+            }
         }
 
         .img-from-other-links-tweaks{
             width: 65%;
             height: 75%;
+
+            @media(max-width: 900px){
+                width: 80%;
+                height: inherit;
+            }
+            @media(max-width: 600px){
+                width: 80%;
+                height: inherit;
+            }
         }
 
         .team-home-visitant{
@@ -42,6 +75,15 @@ export const Container = styled.div`
             flex-direction: row;
             justify-content: center;
             align-items: center;
+
+            @media(max-width: 900px){
+                width: 140px;
+                height: 140px;
+            }
+            @media(max-width: 600px){
+                width: 80px;
+                height: 80px;
+            }
         }
 
         .team{
@@ -52,6 +94,13 @@ export const Container = styled.div`
             h2 {
                 font-size: 4rem;
                 font-weight: 200;
+
+                @media(max-width: 900px){
+                    font-size: 2.4rem;
+                }
+                @media(max-width: 600px){
+                    font-size: 2rem;
+                }
 
                 :hover{
                     color: rgba(250,250,250,.7);
@@ -65,6 +114,17 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @media(max-width: 900px){
+            *{
+                font-size: 2.2rem!important;
+            }
+        }
+        @media(max-width: 600px){
+            *{
+                font-size: 1.6rem!important;
+            }
+        }
 
         .date p{
             color: #FFF;

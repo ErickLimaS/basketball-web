@@ -8,6 +8,15 @@ export const Container = styled.div`
         flex-direction: row;
         background-color: rgba(0,0,0,.75);
         padding: 0.5rem;
+
+        @media(max-width: 900px){
+            flex-direction: column;
+
+            .name-and-position{
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
 
     .name-and-position{
@@ -75,6 +84,10 @@ export const Container = styled.div`
         display: flex;
         flex-direction: row-reverse;
         border-right: 1px solid #fff;
+
+        @media(max-width: 900px){
+            flex-direction: column;
+        }
     }
 
 `
