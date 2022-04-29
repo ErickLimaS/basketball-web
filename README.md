@@ -25,5 +25,5 @@ Você poderá encontrar qualquer jogador das temporadas atuáis até das de 1979
   
   Agradeço aos criadores da API gratuita.(To the creators, i thank you for this API).
   
-  -[balldontlie API](https://www.balldontlie.io/#introduction).
+  - [balldontlie API](https://www.balldontlie.io/#introduction).
   
