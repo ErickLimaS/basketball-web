@@ -10,7 +10,6 @@ import JanuarySeason from '../../components/MonthSeason/JanuarySeason';
 import FebruarySeason from '../../components/MonthSeason/FebruarySeason';
 import MarchSeason from '../../components/MonthSeason/MarchSeason';
 import AprilSeason from '../../components/MonthSeason/AprilSeason';
-
 export default function Team() {
     const [basketTeam, setBasketTeam] = useState([])
     const [chosenSeason, setChosenSeason] = useState()
