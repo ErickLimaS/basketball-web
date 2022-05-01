@@ -1,6 +1,6 @@
 # Basketball Website - Veja os jogadores e jogos de hoje e do passado, com suas estatísticas e resultados.
 
-Site criado com o intuito de mostrar os jogos atuais acontecendo na NBA, podendo acompanhar em tempo real o placar e a tempo do jogo.
+Site criado com o intuito de mostrar os jogos atuais acontecendo na NBA, podendo acompanhar em tempo real o placar e a tempo do jogo. O plano original era ter mais funcionalidades. Mas como a API usada não tinha dados como, tranferência de jogadores ou estatísticas gerais do jogador no time, não pude fazer o site idealizado inicialmente.
 
 ## Veja jogos do passado e as estatísticas da partida.
 
