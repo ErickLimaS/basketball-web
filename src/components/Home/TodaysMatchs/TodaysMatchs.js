@@ -76,13 +76,13 @@ export default function YesterdayHighlights({ item }) {
 
         <div className='status'>
           <div className='score-results'>
-            <div className={ item.status === 'Final' ? 'score  deactiveted' : 'score'}>
+            <div className='score'>
               <h3>{item.home_team_score}</h3>
             </div>
             <p>
               X
             </p>
-            <div className={item.status !== 'Final' ? 'score' : 'score  deactiveted'}>
+            <div className='score'>
               <h3>{item.visitor_team_score}</h3>
             </div>
           </div>

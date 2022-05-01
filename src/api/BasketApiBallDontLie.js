@@ -72,9 +72,26 @@ export default {
     GamesFromYesterday: async () => {
         //to fix
         const date = new Date();
-        const dd = date.getDate() - 1
-        const mm = date.getMonth() + 1 //initial month from 0 to 1
+        let dd = date.getDate() - 1
+        let mm = date.getMonth() + 1 //initial month from 0 to 1
         const yyyy = date.getFullYear()
+
+        if (mm === 3 && dd === 0) {
+            dd = 28;
+            mm = mm - 1
+        }
+        else if ((mm === 2 || mm === 4 || mm === 6 || mm === 9 || mm === 11) && dd === 0) {
+            dd = 31;
+            mm = mm - 1
+        }
+        else if ((mm === 5 || mm === 7 || mm === 8 || mm === 10 || mm === 12) && dd === 0) {
+            dd = 29;
+            mm = mm - 1;
+        }
+        else if (mm === 1 && dd === 0) {
+            dd = 31;
+            mm = 12
+        }
 
         const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/games?dates[]=${yyyy}-${mm}-${dd}`)
 

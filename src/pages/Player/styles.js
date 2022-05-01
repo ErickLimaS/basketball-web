@@ -56,8 +56,6 @@ export const Container = styled.div`
             }
         }
 
-        
-
         .info{
             padding: 2rem;   
             background-color: rgba(0,0,0,.9);

@@ -122,23 +122,28 @@ export default function Home() {
             </div>
 
             <div className='yesterday-highlight-games'>
-                <h2>Destaques das Últimas Partidas</h2>
-                <div className='flex-2'>
-                    <div className='buttons'>
-                        <button type='button' onClick={() => {
-                            showPreviousGameScore(btnClick)
-                        }}>{'<'}</button>
-                        <button type='button' onClick={() => {
-                            showNextGameScore(btnClick)
-                        }}>{'>'}</button>
-                    </div>
-                    <p>{btnClick} de {gamesYesterday.length}</p>
-                    <div className='previous-games'>
-                        {gamesYesterday.map((item, key) => (
-                            <YesterdayHighlights item={item} key={key} />
-                        ))}
-                    </div>
-                </div>
+                {gamesYesterday.length === 0 ? (<h2>There Were No Games Yesterday To Display</h2>) :
+                    (<>
+                        <h2>Yesterday Highlights</h2>
+                        <div className='flex-2'>
+                            <div className='buttons'>
+                                <button type='button' onClick={() => {
+                                    showPreviousGameScore(btnClick)
+                                }}>{'<'}</button>
+                                <button type='button' onClick={() => {
+                                    showNextGameScore(btnClick)
+                                }}>{'>'}</button>
+                            </div>
+                            <p>{btnClick} de {gamesYesterday.length}</p>
+                            <div className='previous-games'>
+                                {console.log(gamesYesterday)}
+                                {gamesYesterday.map((item, key) => (
+                                    <YesterdayHighlights item={item} key={key} />
+                                ))}
+                            </div>
+                        </div>
+                    </>
+                    )}
             </div>
         </C.Container >
     )
