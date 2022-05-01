@@ -85,7 +85,7 @@ export default {
             mm = mm - 1
         }
         else if ((mm === 5 || mm === 7 || mm === 8 || mm === 10 || mm === 12) && dd === 0) {
-            dd = 29;
+            dd = 30;
             mm = mm - 1;
         }
         else if (mm === 1 && dd === 0) {
