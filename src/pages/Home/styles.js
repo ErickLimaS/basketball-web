@@ -79,6 +79,77 @@ export const Container = styled.div`
             font-weight: 500;
         }
 
+        .skeleton{
+            width: 60vh;
+            height: 25%;
+            margin: 1rem;
+            background-color: #FFF;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            @media(max-width: 900px){
+                width: -webkit-fill-available;
+            }
+
+            @media(min-width: 1024px) and (max-width: 1365px){
+                width: fit-content;
+            }
+
+            > div{
+                margin: 0.5rem;
+
+                *{
+                    margin: 1rem 0;
+                }
+            }
+
+            div.skeleton-score{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                margin: 0 1rem;
+
+                p{
+                    width: 50%;
+                    height: 1.5rem;
+                    border-radius: .25rem;
+                    animation: skeleton-loading 1.2s infinite alternate;                    
+                }
+                p:last-child{
+                    width: 100px;
+                    height: 20px;
+                    border-radius: .25rem;
+                    animation: skeleton-loading 1.2s infinite alternate;                    
+                }
+            }
+
+            div .skeleton-img{ 
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                animation: skeleton-loading 1.2s infinite alternate;
+            }
+            div .skeleton-text{ 
+                width: 100%;
+                height: 1.5rem;
+                border-radius: .25rem;
+                animation: skeleton-loading 1.2s infinite alternate;
+            }
+
+            @keyframes skeleton-loading{
+                from{
+                    background-color: #c0c0c0;
+                }
+                to{
+                    background-color: #4e4e4e;
+                }
+            }
+        }
+
         @media(max-width: 990px){
             height: initial;
             overflow: auto;

@@ -10,8 +10,6 @@ export const Container = styled.div`
     align-items: center;
     font-size: 1.5rem;
 
-    
-
     @media(max-width: 1220px){
         width: initial;
         height: initial;

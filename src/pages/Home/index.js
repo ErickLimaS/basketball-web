@@ -11,12 +11,14 @@ export default function Home() {
     const [gamesYesterday, setGamesYesterday] = useState([])
     const [teams, setTeams] = useState([])
     const [btnClick, setBtnClick] = useState(1)
+    const [isFetch, setIsFetch] = useState(false)
 
     useEffect(() => {
         const today = async () => {
 
             const { data } = await API.GamesToday();
             setGamesToday(data)
+            setIsFetch(true)
         }
         today()
         const yesterday = async () => {
@@ -100,9 +102,57 @@ export default function Home() {
                 <div className='flex'>
                     <div className='today-matchs'>
                         <h2 style={{ 'color': '#FFF' }}>Partidas de Hoje</h2>
-                        {gamesToday.map((item, key) => (
-                            <TodaysMatchs item={item} key={key} />
-                        ))}
+                        {isFetch === true ?
+                            (gamesToday.map((item, key) => (
+                                <TodaysMatchs item={item} key={key} />
+                            ))
+                            ) : (
+                                <>
+                                    <div className='skeleton'>
+                                        <div>
+                                            <div className='skeleton-img'></div>
+                                            <div className='skeleton-text'></div>
+                                        </div>
+                                        <div className='skeleton-score'>
+                                            <p> </p>
+                                            <p> </p>
+                                        </div>
+                                        <div>
+                                            <div className='skeleton-img'></div>
+                                            <div className='skeleton-text'></div>
+                                        </div>
+                                    </div>
+                                    <div className='skeleton'>
+                                        <div>
+                                            <div className='skeleton-img'></div>
+                                            <div className='skeleton-text'></div>
+                                        </div>
+                                        <div className='skeleton-score'>
+                                            <p> </p>
+                                            <p> </p>
+                                        </div>
+                                        <div>
+                                            <div className='skeleton-img'></div>
+                                            <div className='skeleton-text'></div>
+                                        </div>
+                                    </div>
+                                    <div className='skeleton'>
+                                        <div>
+                                            <div className='skeleton-img'></div>
+                                            <div className='skeleton-text'></div>
+                                        </div>
+                                        <div className='skeleton-score'>
+                                            <p> </p>
+                                            <p> </p>
+                                        </div>
+                                        <div>
+                                            <div className='skeleton-img'></div>
+                                            <div className='skeleton-text'></div>
+                                        </div>
+                                    </div>
+                                </>
+                            )
+                        }
 
                     </div>
                     <div className='header-title'>

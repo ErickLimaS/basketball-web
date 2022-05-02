@@ -23,6 +23,8 @@ export default function Player() {
 
     useEffect(() => {
 
+        window.scrollTo(0, 0);
+
         const load1 = async () => {
             const { data } = await Axios.get(`https://www.balldontlie.io/api/v1/players/${playerId.id}`)
 
@@ -63,9 +65,6 @@ export default function Player() {
         gameDate = lastGame[0].game.date
         gameDate = new Date(gameDate)
         console.log(gameDate)
-
-
-
     }
 
     console.log(basketTeam)
@@ -167,7 +166,7 @@ export default function Player() {
     return (
         <C.Container >
 
-            {isFetch === true &&
+            {isFetch === true ?
                 (
                     <div className='player-info' style={{
                         'background-image': `url(${teamLogo})`,
@@ -216,6 +215,53 @@ export default function Player() {
                                 <li><span>FT Made:</span> {lastGame[0].ftm}</li>
                                 <li><span>FT Attempt:</span> {lastGame[0].fta}</li>
                                 <li><span>Turnovers:</span> {lastGame[0].turnover}</li>
+                            </ul>
+                        </div>
+                    </div>
+                ) : ( 
+                    //loading skeleton
+                    <div className='player-info skeleton' style={{
+                        'background-image': `url()`,
+                        'backgroundPosition': 'center',
+                        'background-repeat': 'no-repeat',
+                        'background-size': 'auto'
+                    }}>
+                        <div className='img'  style={{
+                        'width': '190px!important',
+                        'height': '240px!important'
+                    }}>
+                            <img src='#' alt='#'/>
+                        </div>
+                        <div className='info'>
+                            <div>
+                                <h1 className='skeleton-text'> </h1>
+                                <Link to='#' className='team-name skeleton-text'>
+                                    <h2> </h2>
+                                </Link>
+                            </div>
+                            <h2 className='skeleton-text'> </h2>
+                            <h2 className='skeleton-text'> </h2>
+                            <h2 className='skeleton-text'> </h2>
+                            <p className='skeleton-text'></p>
+                        </div>
+                        <div className='last-game-stats skeleton'>
+                            <h2 className='skeleton-text'> </h2>
+                            <h3 className='skeleton-text'> </h3>
+                            <div className='skeleton-text'>
+                                <Link to='#'>
+                                    <h4> </h4>
+                                </Link>
+                            </div>
+                            <ul>
+                                <li className='skeleton-text'><span></span></li>
+                                <li className='skeleton-text'><span></span></li>
+                                <li className='skeleton-text'><span></span></li>
+                                <li className='skeleton-text'><span></span></li>
+                                <li className='skeleton-text'><span></span></li>
+                                <li className='skeleton-text'><span></span></li>
+                                <li className='skeleton-text'><span></span></li>
+                                <li className='skeleton-text'><span></span></li>
+                                <li className='skeleton-text'><span></span></li>
                             </ul>
                         </div>
                     </div>
