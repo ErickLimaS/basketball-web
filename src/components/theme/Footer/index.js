@@ -8,6 +8,7 @@ export default function Footer() {
                 <ul>
                     <li><a href='/sobre'>Sobre</a></li>
                     <li><a href='https://github.com/ErickLimaS' target='_blank' rel='noreferrer'>GitHub</a></li>
+                    <li><a href='https://erick-lima.netlify.app/' target='_blank' rel='noreferrer'>Meu Portfólio</a></li>
                     <li><a href='https://www.balldontlie.io/' target='_blank' rel='noreferrer'>API Usada</a></li>
                 </ul>
             </div>
