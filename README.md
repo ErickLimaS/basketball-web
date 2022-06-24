@@ -12,7 +12,7 @@ Pesquise a temporada desejada e verá todos os placares dos jogos antes dos Play
 
 ## Pesquise o seu jogador preferido
 
-Você poderá encontrar qualquer jogador das temporadas atuáis até das de 1979 e ver suas estatísticas.
+Você poderá encontrar qualquer jogador das temporadas atuáis até as de 1979-1080 e ver suas estatísticas.
 
 ### Dependencies usadas:
 
